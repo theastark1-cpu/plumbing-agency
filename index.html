@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Agency — Complete Build-Out Plan</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #21262d;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #3fb950;
+  --accent3: #f0883e;
+  --red: #f85149;
+  --code-bg: #1c2128;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+nav {
+  width: 260px;
+  min-width: 260px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+nav .logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.3px;
+}
+
+nav .subtitle {
+  font-size: 0.78rem;
+  color: var(--text2);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin-bottom: 2px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  color: var(--text2);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+}
+
+nav ul li a:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  padding: 3rem 4rem 6rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent2);
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+p, li {
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+strong {
+  color: var(--accent3);
+  font-weight: 700;
+}
+
+em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  color: var(--accent2);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: var(--text);
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background: var(--surface);
+  border-radius: 0 8px 8px 0;
+  color: var(--text2);
+  font-style: italic;
+}
+
+blockquote strong {
+  color: var(--accent);
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+thead {
+  background: var(--surface2);
+}
+
+th {
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.55rem 0.85rem;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:hover td {
+  background: rgba(88, 166, 255, 0.04);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Checkmark */
+.check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3em;
+  height: 1.3em;
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--accent2);
+  border-radius: 50%;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+li.numbered {
+  list-style: decimal;
+}
+
+/* Hero / Overview cards */
+.hero-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.meta-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.meta-card .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 0.25rem;
+}
+
+.meta-card .value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.meta-card .value.green { color: var(--accent2); }
+.meta-card .value.orange { color: var(--accent3); }
+
+/* Highlight box */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(63, 185, 80, 0.08));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.highlight-box h4 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* TOC */
+.toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+
+.toc h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.toc ol {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.toc li {
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.toc a:hover { text-decoration: underline; }
+
+/* Print */
+@media print {
+  nav { display: none; }
+  main { max-width: 100%; padding: 1rem; }
+  body { font-size: 12px; }
+  .table-wrap { break-inside: avoid; }
+  h2 { break-before: page; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .wrapper { flex-direction: column; }
+  nav {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+  nav ul { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+  nav ul li a { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
+  main { padding: 1.5rem 1rem; }
+  h1 { font-size: 1.6rem; }
+  .hero-meta { flex-direction: column; }
+  .toc ol { columns: 1; }
+}
+</style>
+</head>
+<body>
+
+<div id="pw-gate" style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-align: center;
+    padding: 2rem;
+">
+    <div style="max-width: 400px;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🪠</div>
+        <h1 style="font-size: 1.5rem; font-weight: 700; color: #58a6ff; margin-bottom: 0.5rem;">Plumbing Agency</h1>
+        <p style="color: #8b949e; font-size: 0.9rem; margin-bottom: 1.5rem;">Complete Build-Out Plan</p>
+        <input type="password" id="pw-input" placeholder="Enter password" style="
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #161b22;
+            color: #e6edf3;
+            font-size: 1rem;
+            outline: none;
+            margin-bottom: 0.75rem;
+        ">
+        <button onclick="checkPassword()" style="
+            width: 100%;
+            padding: 0.75rem;
+            background: #238636;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s;
+        " onmouseover="this.style.background='#2ea043'" onmouseout="this.style.background='#238636'">
+            Unlock
+        </button>
+        <p id="pw-error" style="color: #f85149; font-size: 0.85rem; margin-top: 0.75rem; display: none;">Wrong password. Try again.</p>
+    </div>
+</div>
+
+<script>
+const PW_HASH = '38898cfcdeed6dbb529d3d13c4a552f621178039bb2ac29b4330c009a8835050';
+async function checkPassword() {
+    const input = document.getElementById('pw-input').value;
+    const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    if (hashHex === PW_HASH) {
+        document.getElementById('pw-gate').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        sessionStorage.setItem('plumbing_agency_unlocked', 'true');
+    } else {
+        document.getElementById('pw-error').style.display = 'block';
+        document.getElementById('pw-input').value = '';
+    }
+}
+document.getElementById('pw-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkPassword();
+});
+// Auto-unlock if already authenticated this session
+if (sessionStorage.getItem('plumbing_agency_unlocked') === 'true') {
+    document.getElementById('pw-gate').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+}
+</script>
+
+<div id="main-content" style="display:none;">
+<div class="wrapper">
+<nav>
+  <div class="logo">🪠 Plumbing Agency</div>
+  <div class="subtitle">Complete Build-Out Plan<br>June 2026 · v1.0</div>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+<li><a href="#rubric-scorecard">Rubric Scorecard</a></li>
+<li><a href="#the-core-thesis">Core Thesis</a></li>
+<li><a href="#rubric-reference">Rubric Reference</a></li>
+<li><a href="#offer-stack">Offer Stack</a></li>
+<li><a href="#reactivation">Reactivation &amp; Leads</a></li>
+    <li><a href="#tech-stack">Tech Stack</a></li>
+<li><a href="#sales-acquisition">Sales & Acquisition</a></li>
+<li><a href="#operations">Operations</a></li>
+<li><a href="#hiring">Hiring</a></li>
+<li><a href="#financial-model">Financial Model</a></li>
+<li><a href="#timeline">90-Day Timeline</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+  </ul>
+</nav>
+
+<main>
+<h1>Plumbing Agency<br>Complete Build-Out Plan</h1>
+
+<div class="hero-meta">
+  <div class="meta-card">
+    <div class="label">Rubric Score</div>
+    <div class="value">7.28</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Time to First Client</div>
+    <div class="value green">4 Weeks</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Capital Needed</div>
+    <div class="value orange">$5,000</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Target MRR (90 days)</div>
+    <div class="value green">$10K</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Breakeven</div>
+    <div class="value green">Month 1</div>
+  </div>
+</div>
+
+<div class="toc">
+  <h4>Table of Contents</h4>
+  <ol>
+    <li><a href="#rubric-scorecard">Rubric Scorecard</a></li>
+    <li><a href="#the-core-thesis">The Core Thesis</a></li>
+    <li><a href="#rubric-reference">Rubric Reference</a></li>
+    <li><a href="#offer-stack">Offer Stack &amp; Pricing</a></li>
+    <li><a href="#reactivation">Reactivation &amp; Dormant Leads</a></li>
+    <li><a href="#tech-stack">Tech Stack &amp; Architecture</a></li>
+    <li><a href="#sales-acquisition">Sales &amp; Acquisition</a></li>
+    <li><a href="#operations">Operations &amp; Fulfillment</a></li>
+    <li><a href="#hiring">Hiring &amp; Team</a></li>
+    <li><a href="#financial-model">Financial Model</a></li>
+    <li><a href="#timeline">90-Day Execution Timeline</a></li>
+  </ol>
+</div>
+
+<!-- GAME PLAN -->
+<h2>Plumbing Agency — Game Plan</h2>
+<blockquote>**Built from the Niche Selection Rubric** | Ranked ~#2 (7.28, neck-and-neck with HVAC at 7.36)</blockquote>
+<blockquote>**Status:** Full build-out plan — offer, tech, sales, ops, hiring, financials, timeline.</blockquote>
+<hr>
+<h3 id="rubric-scorecard">Rubric Scorecard</h3>
+<div class="table-wrap"><table><thead><tr><th>Gate</th><th>Result</th></tr></thead><tbody><tr><td>G1 — Physical/walk-in</td><td>✅ PASS</td></tr><tr><td>G2 — Transaction value ($150–$20K+)</td><td>✅ PASS</td></tr><tr><td>G3 — Proven demand (flagship home-services vertical)</td><td>✅ PASS</td></tr><tr><td>G4 — Owner reachability (~32-35%)</td><td>✅ PASS</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Dimension</th><th>Weight</th><th>Raw</th><th>Capped</th></tr></thead><tbody><tr><td>D1 — Moat & Founder Edge</td><td>34%</td><td>8</td><td>**7**</td></tr><tr><td>D2 — Unit Economics</td><td>28%</td><td>8</td><td>**8**</td></tr><tr><td>D3 — Competitive Headroom</td><td>22%</td><td>7</td><td>**7**</td></tr><tr><td>D4 — Replication / Velocity</td><td>16%</td><td>7</td><td>**7**</td></tr></tbody></table></div>
+<p><strong>Composite: 7.28 / 10</strong> | <strong>Time to first client: 4 weeks</strong> (compressed from 6)</p>
+<h4>The Plumbing-Specific Edge Over HVAC</h4>
+<p>Plumbing has one structural advantage HVAC doesn't: <strong>emergency urgency premium</strong>. A burst pipe or sewage backup is a 911-level household crisis — higher stakes, higher willingness-to-pay, and higher emotional relief when solved. This means:</p>
+<li>Missed-call capture is <em>more</em> valuable (every missed emergency call = lost $500-$5K)</li>
+<li>The "we answered when no one else did" moment creates instant trust</li>
+<li>Emergency calls are sticky — if you save someone at 2 AM, they're yours for life</li>
+<hr>
+<h3 id="one-unfair-advantage">One Unfair Advantage</h3>
+<blockquote>**Voice-transcription + missed-call-text-back pipeline that captures emergency/after-hours plumbing demand competitors lose to voicemail — converting leaked calls into booked, attributed jobs, then layering maintenance-plan recurring on top of the emergency relationship.**</blockquote>
+<p>Incumbents (ServiceTitan, Housecall Pro, Jobber) sell software subscriptions. You're selling a system that <em>replaces their front office</em> for lead capture, triage, booking, and follow-up — with attribution they've never had.</p>
+<hr>
+<h3 id="plan-overview">Plan Overview</h3>
+<div class="table-wrap"><table><thead><tr><th>Pillar</th><th>Core Deliverable</th><th>Target</th></tr></thead><tbody><tr><td>[[Plumbing Agency — Offer Stack]]</td><td>Retainer model, service tiers, pricing</td><td>$2-3K/mo retainer</td></tr><tr><td>[[Plumbing Agency — Tech Stack]]</td><td>AI pipeline: voice → transcript → text-back → book → CRM</td><td>Week 3 MVP</td></tr><tr><td>[[Plumbing Agency — Sales & Acquisition]]</td><td>Apollo pulls, cold outreach, demo playbook</td><td>3 clients by Week 6</td></tr><tr><td>[[Plumbing Agency — Operations]]</td><td>Fulfillment cadence, client success, dashboards</td><td>90% retention</td></tr><tr><td>[[Plumbing Agency — Hiring]]</td><td>Roles, sequence, comp structure</td><td>Hire #1 by Month 3</td></tr><tr><td>[[Plumbing Agency — Financial Model]]</td><td>Revenue projections, costs, breakeven</td><td>Breakeven Month 4</td></tr><tr><td>[[Plumbing Agency — 90-Day Timeline]]</td><td>Week-by-week execution map</td><td>Revenue by Week 8</td></tr></tbody></table></div>
+<hr>
+<h3 id="the-core-thesis">The Core Thesis</h3>
+<p>The plumbing industry runs on phone calls. 30-40% of those calls — especially after-hours and weekend emergency calls — go to voicemail. Every missed call is a $500-$5,000 job walking to the next plumber who <em>did</em> answer.</p>
+<p>Your agency doesn't compete on ads. It competes on <strong>capture rate</strong>: answer every call, transcribe it, text the lead back within 60 seconds, book the job, and track the revenue. Then layer maintenance plans on top to convert one-time emergency customers into recurring revenue relationships.</p>
+<p>This is the same full-stack AI delivery model that scored the rubric's #1 (Med Spas) and #2 (HVAC) positions — applied to a vertical where the emergency urgency makes the value proposition even sharper.</p>
+<hr>
+<h3 id="quick-start-what-to-do-right-now">Quick-Start: What to Do Right Now</h3>
+<li class="numbered">1. <strong>This week:</strong> Set up the Plumbing Agency — Tech Stack — Twilio number → voice transcription → auto-text-back</li>
+<li class="numbered">2. <strong>This week:</strong> Generate Plumbing Agency — Sales & Acquisition for your first target geo (pick one metro, 50-100 plumbers)</li>
+<li class="numbered">3. <strong>Week 2:</strong> Start outreach — the demo is the product itself (call your own Twilio number live)</li>
+<li class="numbered">4. <strong>Week 4:</strong> Land first client, iterate the pipeline with real call data</li>
+<li class="numbered">5. <strong>Week 8:</strong> 3 clients, $6-9K MRR, hire VA for fulfillment</li>
+<p>Everything below is detailed in the subpages. Start at Plumbing Agency — 90-Day Timeline.</p>
+<hr>
+<p><em>Built 2026-06-02 | Rubric source: Niche Selection Rubric — Completed (Med Spas #1, HVAC #2, Roofing #3)</em></p>
+
+<!-- RUBRIC REFERENCE -->
+<h2 id="rubric-reference">Niche Selection Rubric — Reference</h2>
+<h2>Niche Selection Rubric — Reference</h2>
+<blockquote>**Source:** niche-rubric-completed.docx (2026-06-01)</blockquote>
+<blockquote>**Used for:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Original analysis:** Med Spas #1, HVAC #2, Roofing #3</blockquote>
+<hr>
+<h3 id="rubric-framework">Rubric Framework</h3>
+<h4>Layer 0 — Binary Gates (all must PASS)</h4>
+<div class="table-wrap"><table><thead><tr><th>Gate</th><th>Question</th></tr></thead><tbody><tr><td>G1 — Physical/walk-in</td><td>Is it a brick-and-mortar or location-based service (non-remote)?</td></tr><tr><td>G2 — Transaction value</td><td>Does the average transaction clear the revenue bar for retainer affordability?</td></tr><tr><td>G3 — Proven demand</td><td>Is there public evidence of agencies succeeding in this vertical?</td></tr><tr><td>G4 — Owner reachability</td><td>Are >30% of owners directly reachable (not franchise/PE-gated)?</td></tr></tbody></table></div>
+<h4>Layer 1 — Scored Dimensions</h4>
+<div class="table-wrap"><table><thead><tr><th>Dim</th><th>Weight</th><th>What it measures</th></tr></thead><tbody><tr><td>D1 — Moat & Founder Edge</td><td>34%</td><td>How uniquely suited is the founder's tech stack to this vertical? Can the build become the system of record?</td></tr><tr><td>D2 — Unit Economics</td><td>28%</td><td>Margins, recurring potential, seasonality, retainer affordability</td></tr><tr><td>D3 — Competitive Headroom</td><td>22%</td><td>Advertiser presence, CPC band, whitespace, category ownership</td></tr><tr><td>D4 — Replication / Velocity</td><td>16%</td><td>Operator count, trade groups, demo-ability, proof travel speed</td></tr></tbody></table></div>
+<h4>Anti-Vanity Cap</h4>
+<p>D1 is capped at: <code>avg(D2, D3, D4)</code> — prevents overrating the founder's edge relative to market fundamentals.</p>
+<h4>Time to First Client</h4>
+<pre><code class="language-">
+Base 6 weeks
+− [penalty/reduction based on G4, D3, D4]
+</code></pre>
+<hr>
+<h3 id="original-results">Original Results</h3>
+<div class="table-wrap"><table><thead><tr><th>Rank</th><th>Market</th><th>Composite</th><th>D1*</th><th>D2</th><th>D3</th><th>D4</th><th>Weeks</th></tr></thead><tbody><tr><td>#1</td><td>Med Spas</td><td>8.10</td><td>8 (cap 8)</td><td>9</td><td>8</td><td>7</td><td>4</td></tr><tr><td>#2</td><td>HVAC</td><td>7.36</td><td>7 (cap 7)</td><td>8</td><td>8</td><td>7</td><td>4</td></tr><tr><td>#3</td><td>Roofing</td><td>6.74</td><td>6 (cap 6)</td><td>7</td><td>9</td><td>6</td><td>5</td></tr></tbody></table></div>
+<hr>
+<h3 id="methodology-notes">Methodology Notes</h3>
+<li>D1 shown post-cap. Composite uses the capped D1.</li>
+<li>Markets scored 0-10 on each dimension.</li>
+<li>Gate failures = automatic disqualification regardless of scores.</li>
+<li>Anti-vanity cap prevents D1 from exceeding the average of D2-D4.</li>
+<hr>
+<p>Plumbing Agency — Game Plan</p>
+
+<!-- OFFER STACK -->
+<h2 id="offer-stack">Offer Stack &amp; Pricing</h2>
+<h2>Plumbing Agency — Offer Stack</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** Sell outcomes, not software. The retainer is invisible against the revenue it captures.</blockquote>
+<hr>
+<h3 id="the-core-offer">The Core Offer</h3>
+<p><strong>"We answer every phone call your plumbing company gets — including nights, weekends, and holidays — and book the jobs you're currently losing to voicemail."</strong></p>
+<p>Not "we build AI chatbots" or "we run Google Ads." The offer IS the missed-call-to-booked-job pipeline, proven with real attribution.</p>
+<hr>
+<h3 id="service-tiers">Service Tiers</h3>
+<h4>Tier 1 — "Leak Stopper" | $1,500/mo</h4>
+<p><em>Best for: 1-3 truck shops testing the waters</em></p>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>Detail</th></tr></thead><tbody><tr><td>Missed-call capture</td><td>Twilio number → auto-text-back within 60 seconds</td></tr><tr><td>Voice transcription</td><td>Every voicemail transcribed, sent to owner's phone/email</td></tr><tr><td>Basic triage</td><td>Emergency vs. non-emergency routing</td></tr><tr><td>Lead dashboard</td><td>Weekly report: calls received, answered, booked, revenue attributed</td></tr><tr><td>Setup fee</td><td>$1,500 one-time</td></tr></tbody></table></div>
+<p><strong>The math for them:</strong> If this captures just 2 emergency calls/month they'd otherwise lose, at $1,500 avg job value, that's $3,000 in new revenue — 2x ROAS before they blink.</p>
+<hr>
+<h4>Tier 2 — "Pipeline Pro" | $2,500/mo ⭐ (Recommended)</h4>
+<p><em>Best for: 5-15 truck operations with front-office staff</em></p>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>Detail</th></tr></thead><tbody><tr><td>Everything in Tier 1</td><td>+</td></tr><tr><td>AI booking agent</td><td>Voice AI answers, triages, and books directly into their CRM/calendar</td></tr><tr><td>Quote follow-up automation</td><td>SMS/email nurture for unconverted quotes (3-touch sequence over 7 days)</td></tr><tr><td>Maintenance plan upsell</td><td>Automated "annual inspection due" reminders → booked appointments</td></tr><tr><td>Live dashboard</td><td>Real-time attribution: calls → booked → revenue, by source</td></tr><tr><td>Monthly strategy call</td><td>30-min review of pipeline metrics, conversion rates, optimization</td></tr><tr><td>Setup fee</td><td>$2,500 one-time</td></tr></tbody></table></div>
+<p><strong>The math for them:</strong> 15-truck operation getting 200-300 calls/month. Even a 10% capture-rate improvement on a 30% voicemail rate = 6-9 more booked jobs/month. At $800 avg ticket (mix of service + install), that's $4,800-$7,200 in new monthly revenue. The retainer is <50% of the gain.</p>
+<hr>
+<h4>Tier 3 — "Full Stack" | $4,000/mo</h4>
+<p><em>Best for: 15+ truck operations wanting the system of record</em></p>
+<div class="table-wrap"><table><thead><tr><th>Feature</th><th>Detail</th></tr></thead><tbody><tr><td>Everything in Tier 2</td><td>+</td></tr><tr><td>Full CRM replacement</td><td>Your pipeline becomes their lead-to-cash system of record</td></tr><tr><td>Multi-location support</td><td>Unified dashboard across service areas</td></tr><tr><td>Reputation automation</td><td>Post-job review requests, review monitoring, response drafts</td></tr><tr><td>LTV tracking</td><td>Per-customer revenue, retention, referral attribution</td></tr><tr><td>Quarterly business review</td><td>Deep-dive on unit economics, LTV/CAC, expansion roadmap</td></tr><tr><td>Priority support</td><td><4 hour response SLA</td></tr><tr><td>Setup fee</td><td>$4,000 one-time</td></tr></tbody></table></div>
+<hr>
+<h3 id="retainer-justification-the-sales-script">Retainer Justification (The Sales Script)</h3>
+<p>When a plumbing owner pushes back on price, the math weapon:</p>
+<li class="numbered">1. <strong>"How many calls do you miss to voicemail each month?"</strong> (They'll guess 20-40)</li>
+<li class="numbered">2. <strong>"What's your average job ticket?"</strong> (Usually $400-$800 service, $3K-$15K install)</li>
+<li class="numbered">3. <strong>"If we capture just 3-4 of those missed calls... at $800 avg... that's $2,400-$3,200 in new revenue. Our retainer is $2,500. You're cash-flow positive on month one."</strong></li>
+<p>The retainer disappears into the revenue it generates. That's the fund-grade LTV/CAC modeling from the rubric applied directly to their business.</p>
+<hr>
+<h3 id="what-we-don't-do">What We Don't Do</h3>
+<div class="table-wrap"><table><thead><tr><th>Not our game</th><th>Why</th></tr></thead><tbody><tr><td>Google Ads / PPC management</td><td>Commodity. Every agency does this. Zero moat.</td></tr><tr><td>SEO / content marketing</td><td>Long-tail, slow, doesn't leverage the AI edge.</td></tr><tr><td>Social media management</td><td>Plumbing owners don't care about Instagram. They care about phones ringing.</td></tr><tr><td>Website builds</td><td>One-and-done project work. Not recurring. Not our model.</td></tr></tbody></table></div>
+<p>Refer these out for a finder's fee. Stay focused on the recurring-revenue pipeline.</p>
+<hr>
+<h3 id="the-unfair-bundle">The Unfair Bundle</h3>
+<p>If you land a plumbing client AND they have an HVAC division (many do), the same pipeline serves both. Cross-sell instantly — half the onboarding work for full additional retainer. This is the multi-location play that makes Tier 3 compound.</p>
+<hr>
+<h3 id="pricing-psychology">Pricing Psychology</h3>
+<li><strong>Tier 1 is the foot in the door.</strong> Cheap enough to try, immediately ROI-positive.</li>
+<li><strong>Tier 2 is where you want them.</strong> Full value delivery, strong retention.</li>
+<li><strong>Tier 3 is aspirational.</strong> For the ones who want to fire their front-office software. Fewer clients, higher LTV, lower churn.</li>
+<p><strong>Upgrade path:</strong> Start everyone on Tier 1 or 2. Within 90 days, the results data sells the upgrade for you.</p>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Sales & Acquisition | Plumbing Agency — Financial Model</p>
+
+<!-- TECH STACK -->
+
+<h2 id="reactivation">Reactivation &amp; Dormant Leads</h2>
+
+<p>Most plumbing companies have <strong>hundreds to thousands</strong> of past customers and unconverted leads in their database — people who already called, already trusted them, already paid them. And they never hear from the company again.</p>
+
+<div class="hero-meta">
+  <div class="meta-card">
+    <div class="label">Dormant Customers (avg 10-truck shop)</div>
+    <div class="value orange">1,000–2,500</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Recoverable Annual Revenue</div>
+    <div class="value green">$80K–$200K</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Unconverted Leads Lost/Month</div>
+    <div class="value orange">240–360</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Total Money on the Table</div>
+    <div class="value green">$300K–$550K+</div>
+  </div>
+</div>
+
+<hr>
+
+<h3>The Plumbing Industry's Biggest Hidden Revenue Leak</h3>
+
+<p>Plumbing companies spend $2,000-$10,000/month on Google Ads, Angi, and HomeAdvisor to generate <strong>new</strong> leads. Meanwhile, their own database — past customers who already know them, already trust them, and historically convert at <strong>3-12x the rate</strong> of cold leads — sits untouched.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Lead Source</th><th>Cost to Acquire</th><th>Conversion Rate</th><th>Trust Level</th></tr></thead>
+<tbody>
+<tr><td>New lead (Google Ads)</td><td>$50–$150</td><td>5–20%</td><td>Zero</td></tr>
+<tr><td>Past customer (dormant 12–18 mo)</td><td>$0.05–$0.50 (SMS/email)</td><td><strong>60–70%</strong></td><td>Already paid you</td></tr>
+<tr><td>Unconverted quote (never followed up)</td><td>$0 (already paid for)</td><td><strong>10–25%</strong></td><td>Showed intent</td></tr>
+<tr><td>No-show / cancelled appointment</td><td>$0 (already scheduled)</td><td><strong>15–30%</strong></td><td>Wanted you there</td></tr>
+</tbody>
+</table></div>
+
+<blockquote><strong>"Most contractors I talk to have hundreds of past customers they haven't contacted in two years. Same customers who paid them. Trusted them."</strong> — Thaddeus Tondu, service operations auditor (200+ shops)</blockquote>
+
+<hr>
+
+<h3>Three Reactivation Pools (and What They're Worth)</h3>
+
+<h4>1. Dormant Past Customers (The Gold Mine)</h4>
+
+<p>Customers who had work done 12+ months ago. They already know your quality. They already have your number. They just forgot you exist.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Segment</th><th>Time Since Last Job</th><th>Reactivation Rate</th><th>Value Per Recovery</th></tr></thead>
+<tbody>
+<tr><td>Warm dormant</td><td>12–18 months</td><td><strong>12–18%</strong></td><td>$400–$1,200</td></tr>
+<tr><td>Cool dormant</td><td>18–36 months</td><td>6–12%</td><td>$300–$900</td></tr>
+<tr><td>Cold dormant</td><td>36+ months</td><td>2–5%</td><td>$200–$600</td></tr>
+</tbody>
+</table></div>
+
+<div class="highlight-box">
+<h4>Real Math for a 10-Truck Shop</h4>
+<p>4,000 total past customers in CRM → <strong>1,500 dormant</strong> (12+ months)<br>
+Run a 5-touch SMS/email reactivation campaign:</p>
+<ul>
+<li>Warm (12–18 mo): 400 contacts × 15% reactivation × $800 avg = <strong>$48,000</strong></li>
+<li>Cool (18–36 mo): 600 contacts × 9% × $600 avg = <strong>$32,400</strong></li>
+<li>Cold (36+ mo): 500 contacts × 3% × $400 avg = <strong>$6,000</strong></li>
+</ul>
+<p><strong>Total from one campaign: $86,400 in recovered revenue.</strong> Campaign cost: ~$150 in SMS credits + 2 hours of setup.</p>
+<p><strong>ROI: 576:1.</strong></p>
+</div>
+
+<h4>2. Unconverted Leads &amp; Quotes (The Graveyard)</h4>
+
+<p>60% of qualified leads never convert past the initial contact. They called. They asked for a quote. They showed up on your radar — and then <em>nothing happened</em>. No follow-up. No reminder. No second touch.</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Type</th><th>Why They Didn't Book</th><th>Recovery Strategy</th><th>Expected Recovery</th></tr></thead>
+<tbody>
+<tr><td>Quote sent, no response</td><td>Price shock, shopping around</td><td>48hr check-in → 7-day value email → 14-day offer</td><td>10–15%</td></tr>
+<tr><td>Called, didn't book</td><td>Went with competitor, timing off</td><td>"Still need help?" SMS at 3 and 7 days</td><td>8–12%</td></tr>
+<tr><td>Web form, never followed up</td><td>CSR missed it, got buried</td><td>Instant auto-reply → 24hr SMS → 72hr call</td><td>15–25%</td></tr>
+<tr><td>No-show appointment</td><td>Forgot, found someone else</td><td>Same-day reschedule offer → 3-day check-in</td><td>20–30%</td></tr>
+</tbody>
+</table></div>
+
+<div class="highlight-box">
+<h4>Monthly Leakage — 10-Truck Shop</h4>
+<p>500 leads/month → 60% unconverted = <strong>300 lost leads/month</strong><br>
+Recover just 12% with automated follow-up = <strong>36 recovered jobs/month</strong><br>
+At $800 avg ticket = <strong>$28,800/month in NEW revenue from leads you already paid for.</strong></p>
+<p><strong>Annualized: $345,600. From leads you were throwing away.</strong></p>
+</div>
+
+<h4>3. Maintenance Plan Lapses (The Recurring Engine Killer)</h4>
+
+<p>Customers who signed up for an annual maintenance plan, came once, and never renewed. They already believed in preventive care — they just needed a reminder.</p>
+
+<ul>
+<li>Typical lapse rate: <strong>25–40%</strong> after year 1</li>
+<li>90-day grace period reactivation rate: <strong>40–55%</strong></li>
+<li>6-12 month lapsed: <strong>15–25%</strong></li>
+<li>Value of a reactivated maintenance customer: <strong>$1,200–$2,400/year</strong> (plan + repair upsells)</li>
+</ul>
+
+<hr>
+
+<h3>How This Fits Into the Agency Offer</h3>
+
+<p>This isn't a separate product. It's a <strong>feature of every tier</strong> that makes the ROI math impossible to argue with.</p>
+
+<h4>Tier 1 Additions — "Leak Stopper" Reactivation</h4>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Feature</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>CRM dormant scan</td><td>Pull client's entire customer database, flag all contacts 12+ months inactive</td></tr>
+<tr><td>Automated SMS check-in</td><td>3-touch sequence over 14 days: "Hey [Name], it's been [X] months since we [last job]. Everything still running okay?"</td></tr>
+<tr><td>Unconverted lead rescue</td><td>Any quote or call older than 7 days gets automated 3-touch follow-up: 48hr → 7-day → 14-day</td></tr>
+<tr><td>Monthly recovery report</td><td>"This month: 23 dormant customers contacted → 4 booked → $3,200 recovered revenue"</td></tr>
+</tbody>
+</table></div>
+
+<h4>Tier 2 Additions — "Pipeline Pro" Reactivation</h4>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Feature</th><th>What It Does</th></tr></thead>
+<tbody>
+<tr><td>Everything in Tier 1</td><td>+</td></tr>
+<tr><td>Smart segmentation</td><td>Warm (12–18 mo) / Cool (18–36 mo) / Cold (36+ mo) — different messaging per cohort based on last job type</td></tr>
+<tr><td>Multi-channel reactivation</td><td>SMS → email → AI voice call cascade. Escalates channels for non-responders</td></tr>
+<tr><td>Seasonal trigger campaigns</td><td>Spring: "Winter freeze damage check." Fall: "Pre-holiday drain inspection." Before storm season: "Sump pump check."</td></tr>
+<tr><td>Maintenance plan win-back</td><td>Auto-detect lapsed plans, send renewal offer with price-lock guarantee</td></tr>
+<tr><td>No-show recovery</td><td>Same-day rebook SMS → 24hr email → 72hr AI call. Recovers 20-30% of no-shows</td></tr>
+<tr><td>Attribution dashboard</td><td>Track exactly how much revenue came from reactivation vs. new leads vs. missed-call capture</td></tr>
+</tbody>
+</table></div>
+
+<hr>
+
+<h3>The Reactivation Playbook (What We Automate)</h3>
+
+<p>This is the engine running silently in the background while the shop does its normal work:</p>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Trigger</th><th>Action</th><th>Timing</th></tr></thead>
+<tbody>
+<tr><td>Customer hits 12 months no contact</td><td>Enter "Warm Dormant" cohort → Day 1 soft SMS check-in</td><td>Auto</td></tr>
+<tr><td>No response to SMS #1</td><td>Day 5 email: "3 things your plumber checks that you can't see"</td><td>Auto</td></tr>
+<tr><td>No response to email</td><td>Day 10 SMS #2: returning customer credit offer ($25-75 off)</td><td>Auto</td></tr>
+<tr><td>Opened but didn't book</td><td>Day 15 social proof push: testimonials + Google rating</td><td>Auto</td></tr>
+<tr><td>Still no response</td><td>Day 21 final note: "We'll stop reaching out — but we're here if you need us"</td><td>Auto</td></tr>
+<tr><td>Quote sent, 48 hours no response</td><td>SMS: "Hey [Name], just checking if you had questions about the quote"</td><td>Auto</td></tr>
+<tr><td>Still no response (7 days)</td><td>Email: value-add education related to their quoted service</td><td>Auto</td></tr>
+<tr><td>Still no response (14 days)</td><td>Final SMS: "The quote is still valid — want us to hold the slot?"</td><td>Auto</td></tr>
+<tr><td>Appointment no-show</td><td>Immediate SMS: "We missed you — want to reschedule? Here's a link"</td><td>Auto</td></tr>
+<tr><td>Maintenance plan expires</td><td>Day 1 email: "Your plan just lapsed — renew at same rate"</td><td>Auto</td></tr>
+<tr><td>30 days lapsed</td><td>SMS + $25 incentive to renew</td><td>Auto</td></tr>
+<tr><td>60 days lapsed</td><td>AI voice call from "owner": personal invitation to come back</td><td>Auto</td></tr>
+</tbody>
+</table></div>
+
+<hr>
+
+<h3>The Pitch: "Your Best Customers Are Already in Your Phone"</h3>
+
+<p>When a plumbing owner hesitates, hit them with a number they can't ignore:</p>
+
+<ol>
+<li><strong>"How many past customers are in your database right now?"</strong> (They'll say 2,000-5,000)</li>
+<li><strong>"When's the last time you contacted the ones from 2-3 years ago?"</strong> (They'll say never)</li>
+<li><strong>"30-50% of those are dormant. That's 600-2,500 people who already paid you, already trust you. We contact them automatically — SMS, email, voice. Even at a conservative 10% reactivation rate at $600 avg ticket, that's $36,000-$150,000 in recovered revenue. From people already in your phone."</strong></li>
+<li><strong>"And for the leads you're paying Google $50-150 each for? 60% of those never get followed up. We automate that too. Every quote. Every missed call. Every web form. That's another $200-350K/year you're currently lighting on fire."</strong></li>
+</ol>
+
+<blockquote><strong>"You're spending thousands on new leads while ignoring the gold mine in your own database. We don't replace your ad spend — we make every dollar you already spent pay you back a second time."</strong></blockquote>
+
+<hr>
+
+<h3>Competitive Intel: Why Incumbents Can't Do This</h3>
+
+<ul>
+<li><strong>Ad agencies:</strong> Make money when you spend MORE on ads. Reactivation reduces ad spend. Misaligned incentives.</li>
+<li><strong>ServiceTitan / Housecall Pro:</strong> Have the data. Don't do the outreach. Their CRM holds the names — but no automated SMS/email/voice sequences fire. The database is a filing cabinet, not an engine.</li>
+<li><strong>Answering services:</strong> Handle inbound only. Zero outbound. Don't even have access to the customer history.</li>
+</ul>
+
+<p>You win because you're the only provider whose business model aligns with <strong>making the database work harder than the ad budget.</strong></p>
+
+<hr>
+
+<h3>Sources</h3>
+
+<div class="table-wrap"><table>
+<thead><tr><th>Data Point</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>30-50% of customer database dormant (12+ months)</td><td>TradeWorks AI, 2025</td></tr>
+<tr><td>8-15% dormant reactivation conversion rate</td><td>TradeWorks AI Contractor Email Playbook</td></tr>
+<tr><td>Avg dormant customer worth $800-$2,400/year</td><td>TradeWorks AI</td></tr>
+<tr><td>60% of qualified leads never convert past initial contact</td><td>Operations audit of 200+ service companies (Thaddeus Tondu, LinkedIn)</td></tr>
+<tr><td>40-60% of leads lost due to no follow-up system</td><td>Multiple plumbing industry specialists (YouTube/LinkedIn/Instagram)</td></tr>
+<tr><td>60-70% sell-through to existing customers vs. 5-20% new</td><td>FieldEdge, 2025</td></tr>
+<tr><td>Customer retention costs 5-7x less than acquisition</td><td>Forbes / ServiceTitan</td></tr>
+<tr><td>70% of customers take 1+ days to decide on plumbing provider</td><td>Google research via Plumbing &amp; Mechanical, Feb 2026</td></tr>
+<tr><td>Extra 5-10% conversions from structured follow-up on existing leads</td><td>Plumbing &amp; Mechanical / Redwood Services, Feb 2026</td></tr>
+<tr><td>3-6% recovery per campaign cycle; up to 12% with AI voice</td><td>Krasa.ai Dormant Customer Reactivation</td></tr>
+<tr><td>$118,900 recovered in 30 days from dormant leads</td><td>Marcus Collins (LinkedIn), plumbing industry case study</td></tr>
+<tr><td>14 maintenance appointments booked from 800 dormant emails</td><td>PM Consulting, HVAC contractor case study</td></tr>
+</tbody>
+</table></div>
+
+
+<h2 id="tech-stack">Tech Stack &amp; Architecture</h2>
+<h2>Plumbing Agency — Tech Stack</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** Build the pipeline first. CRM integration second. Don't overbuild before you have a paying client.</blockquote>
+<hr>
+<h3 id="architecture-overview">Architecture Overview</h3>
+<pre><code class="language-">
+Inbound Call → Twilio (missed → voicemail)
+                    ↓
+              Voice Transcription (Deepgram / Whisper)
+                    ↓
+              Emergency Triage (LLM classifier)
+                    ↓
+         ┌──────────────────────────────────┐
+         │  Auto-Text-Back (<60 seconds)     │
+         │  "Hi [Name], we saw your call     │
+         │   about [issue]. Can we send a    │
+         │   plumber? Reply YES and we'll    │
+         │   get you scheduled."             │
+         └──────────────────────────────────┘
+                    ↓
+              Lead → Booked (CRM push / calendar)
+                    ↓
+              Attribution Dashboard (revenue tied to call source)
+</code></pre>
+<hr>
+<h3 id="phase-1--missed-call-mvp-weeks-1-3">Phase 1 — Missed-Call MVP (Weeks 1-3)</h3>
+<p><strong>Goal:</strong> Capture a missed call → transcribe → text back → log it. Nothing else.</p>
+<h4>Stack</h4>
+<div class="table-wrap"><table><thead><tr><th>Component</th><th>Tool</th><th>Cost</th><th>Notes</th></tr></thead><tbody><tr><td>Phone number</td><td>Twilio</td><td>$1/mo + $0.01/min</td><td>Buy a local area code number. Forward to clients' existing line.</td></tr><tr><td>Call handling</td><td>Twilio Studio / TwiML</td><td>~$5/mo</td><td>Route calls, detect voicemail, record message</td></tr><tr><td>Transcription</td><td>Deepgram</td><td>$0.005/min</td><td>Faster than Whisper, real-time capable. $15 credit = 3,000 free minutes.</td></tr><tr><td>Auto-text-back</td><td>Twilio SMS</td><td>$0.0079/msg</td><td>Triggered on transcription completion</td></tr><tr><td>Lead logging</td><td>Google Sheets (MVP) → Airtable</td><td>Free</td><td>Simple structured log: timestamp, phone, transcription, status</td></tr><tr><td>Orchestration</td><td>Python script on a $5 VPS (Hetzner/Railway)</td><td>$5/mo</td><td>Twilio webhook → transcribe → classify → text → log</td></tr></tbody></table></div>
+<h4>Build Steps</h4>
+<li class="numbered">1. <strong>Buy Twilio number</strong> — pick a local area code in your target geo</li>
+<li class="numbered">2. <strong>Configure Twilio Studio flow</strong> — detect missed call → record voicemail → POST webhook to your server</li>
+<li class="numbered">3. <strong>Write the webhook handler</strong> (Python/FastAPI):</li>
+<p>   - Receive audio URL from Twilio</p>
+<p>   - Send to Deepgram for transcription</p>
+<p>   - Run LLM classifier: emergency vs. non-emergency, extract key details (issue type, urgency)</p>
+<p>   - Send SMS back via Twilio with personalized message</p>
+<p>   - Log to Google Sheets</p>
+<li class="numbered">4. <strong>Deploy</strong> on Railway or Hetzner VPS. Health-check endpoint. Uptime monitor (UptimeRobot, free).</li>
+<li class="numbered">5. <strong>Test</strong> — call your own number, leave a voicemail, verify the text-back arrives in <60 seconds.</li>
+<h4>MVP Cost: ~$15-20/mo + $5 VPS</h4>
+<hr>
+<h3 id="phase-2--booking-&-pipeline-weeks-4-8">Phase 2 — Booking & Pipeline (Weeks 4-8)</h3>
+<p><strong>Goal:</strong> After text-back confirmation, push the lead into a booking flow.</p>
+<h4>Additions</h4>
+<div class="table-wrap"><table><thead><tr><th>Component</th><th>Tool</th><th>Notes</th></tr></thead><tbody><tr><td>AI voice agent</td><td>Vapi / Bland AI / Retell</td><td>Answers live calls, triages, books. ~$0.10/min.</td></tr><tr><td>Calendar integration</td><td>Cal.com API / Google Calendar</td><td>Check availability, book slot, send confirmation</td></tr><tr><td>CRM push</td><td>ServiceTitan API / Housecall Pro API / Zapier</td><td>Push booked job into client's existing CRM</td></tr><tr><td>Quote follow-up</td><td>Custom SMS sequence</td><td>3-touch: immediate confirmation → 48h check-in → 7-day last call</td></tr><tr><td>Maintenance reminders</td><td>Scheduled SMS/email</td><td>"Your annual inspection is due" → booking link</td></tr></tbody></table></div>
+<h4>Build Steps</h4>
+<li class="numbered">1. <strong>Integrate with client's CRM</strong> — ServiceTitan or Housecall Pro. Most have REST APIs.</li>
+<li class="numbered">2. <strong>Add AI voice agent</strong> — handles live calls during business hours. Script: triage emergency vs. routine, collect details, offer booking.</li>
+<li class="numbered">3. <strong>Build quote follow-up automation</strong> — when a quote is sent but not accepted, trigger 3-touch SMS sequence.</li>
+<li class="numbered">4. <strong>Dashboard v1</strong> — simple web page showing: calls today, calls missed, calls captured, jobs booked, revenue attributed. Built with Streamlit or plain HTML/JS.</li>
+<hr>
+<h3 id="phase-3--system-of-record-month-3+">Phase 3 — System of Record (Month 3+)</h3>
+<p><strong>Goal:</strong> Replace the client's front-office stack. Your pipeline is their CRM.</p>
+<h4>Additions</h4>
+<div class="table-wrap"><table><thead><tr><th>Component</th><th>Tool</th><th>Notes</th></tr></thead><tbody><tr><td>Full lead-to-cash CRM</td><td>Custom build (or white-label close.com/Pipedrive)</td><td>Leads → quotes → jobs → invoices → payments</td></tr><tr><td>LTV tracking</td><td>Custom database (Postgres)</td><td>Per-customer: lifetime revenue, retention, referrals, service history</td></tr><tr><td>Reputation automation</td><td>Birdeye API / custom</td><td>Post-job review request → 5-star response → negative escalation alert</td></tr><tr><td>Multi-location</td><td>Multi-tenant architecture</td><td>One dashboard, unlimited locations</td></tr><tr><td>White-label</td><td>Custom domain, branded emails/SMS</td><td>"Acme Plumbing" not "Plumbing Agency Inc"</td></tr></tbody></table></div>
+<hr>
+<h3 id="key-technical-decisions">Key Technical Decisions</h3>
+<h4>Why Deepgram over Whisper?</h4>
+<li>Speed: Deepgram is real-time (<2 seconds), Whisper is batch (5-15 seconds). For emergency calls, seconds matter.</li>
+<li>Cost: Deepgram is cheaper at scale.</li>
+<li>But: Keep Whisper as fallback for long/quiet voicemails where accuracy matters more than speed.</li>
+<h4>Why Twilio over other telephony?</h4>
+<li>Most mature API, best documentation, largest ecosystem.</li>
+<li>Portability: clients can forward their existing number to your Twilio number. No number change required.</li>
+<li>But: watch per-message costs. At scale (1,000+ texts/month), consider bandwidth.com or Telnyx.</li>
+<h4>Why Google Sheets for MVP?</h4>
+<li>Zero build time. Client can see it immediately. Proves the concept.</li>
+<li>Migrate to Airtable → custom DB when you have 3+ clients.</li>
+<h4>Model choice for classification</h4>
+<li>Use a small, fast model (GPT-4o-mini, Claude Haiku) for emergency triage.</li>
+<li>Prompt: "Classify this plumbing voicemail: EMERGENCY (flood, burst pipe, sewage, no water, gas leak) or ROUTINE (drip, slow drain, estimate request, maintenance). Extract: caller name, phone, issue summary, urgency 1-10."</li>
+<hr>
+<h3 id="monthly-tech-costs-at-scale">Monthly Tech Costs (at Scale)</h3>
+<div class="table-wrap"><table><thead><tr><th>Component</th><th>1 Client</th><th>10 Clients</th><th>50 Clients</th></tr></thead><tbody><tr><td>Twilio numbers</td><td>$10</td><td>$100</td><td>$500</td></tr><tr><td>Call minutes</td><td>$5</td><td>$150</td><td>$800</td></tr><tr><td>SMS messages</td><td>$3</td><td>$80</td><td>$400</td></tr><tr><td>Deepgram</td><td>$2</td><td>$60</td><td>$300</td></tr><tr><td>LLM (classification)</td><td>$1</td><td>$30</td><td>$150</td></tr><tr><td>VPS / hosting</td><td>$10</td><td>$40</td><td>$150</td></tr><tr><td>AI voice agent</td><td>$20</td><td>$200</td><td>$1,000</td></tr><tr><td>**Total**</td><td>**$51**</td><td>**$660**</td><td>**$3,300**</td></tr></tbody></table></div>
+<p>At $2,500/mo retainer, gross margin is 95%+ at 1 client, 75% at 10 clients. The tech costs scale sub-linearly with good batching.</p>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Offer Stack | Plumbing Agency — Sales & Acquisition</p>
+
+<!-- SALES -->
+<h2 id="sales-acquisition">Sales &amp; Acquisition</h2>
+<h2>Plumbing Agency — Sales & Acquisition</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** The demo IS the product. Call your own number live on a sales call and watch them lean in.</blockquote>
+<hr>
+<h3 id="target-profile">Target Profile</h3>
+<div class="table-wrap"><table><thead><tr><th>Attribute</th><th>Target</th></tr></thead><tbody><tr><td>Company size</td><td>3-25 trucks (too small = can't afford; too big = PE-owned, gatekeepers)</td></tr><tr><td>Owner involvement</td><td>Owner-operator, not absentee. Makes marketing/front-office decisions.</td></tr><tr><td>Current pain</td><td>"I lose calls to voicemail on nights/weekends" or "my dispatcher can't keep up"</td></tr><tr><td>Tech stack</td><td>Already uses ServiceTitan / Housecall Pro / Jobber (proves tech willingness)</td></tr><tr><td>Geo</td><td>Single metro area. Don't scatter — density creates word-of-mouth.</td></tr><tr><td>Annual revenue</td><td>$500K-$5M</td></tr></tbody></table></div>
+<p><strong>Anti-targets:</strong></p>
+<li>Franchise locations (decision-maker is corporate, not local)</li>
+<li>PE-owned rollups (purchasing department, not owner)</li>
+<li>Solo operators with 1 truck (can't afford $1,500+ retainer)</li>
+<li>Owners who "don't believe in technology" (don't waste your time)</li>
+<hr>
+<h3 id="apollo-list-build">Apollo List Build</h3>
+<h4>Search Criteria</h4>
+<pre><code class="language-">
+Industry: Plumbing, HVAC & Plumbing, Home Services
+Job Titles: Owner, Founder, President, CEO, General Manager
+Company Size: 5-50 employees
+Location: [Target Metro] — pick ONE (Dallas, Phoenix, Atlanta, Chicago, etc.)
+Revenue: $500K+
+Keywords: "plumbing" "plumber" "plumbing company"
+</code></pre>
+<h4>List Hygiene</h4>
+<li>Export: First name, last name, company, title, email, direct phone (if available), company phone</li>
+<li>Remove: Franchise locations (check company names against franchise directories), PE-backed (look for "backed by" or "portfolio company" language)</li>
+<li>Enrich: Check each company has a Google Business Profile with reviews (validates they're real + reachable)</li>
+<li>Target list size: 100-200 qualified leads per geo</li>
+<p><strong>Cost:</strong> Apollo free tier = 100 email credits/month. Paid ($49/mo) = unlimited. Start free.</p>
+<hr>
+<h3 id="outreach-playbook">Outreach Playbook</h3>
+<h4>Sequence: "The Missed Call Audit" (5 touches over 14 days)</h4>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Channel</th><th>Message</th></tr></thead><tbody><tr><td>1</td><td>Cold call</td><td>"Hey [Name], quick question — do you know how many calls your shop misses to voicemail each month?"</td></tr><tr><td>1</td><td>Voicemail (if no answer)</td><td>Leave the URL to a Loom (2 min) showing your pipeline in action</td></tr><tr><td>3</td><td>Email #1</td><td>Subject: "38% of your calls go to voicemail — here's what that costs"</td></tr><tr><td>5</td><td>SMS</td><td>"Hey [Name], sent you an email about missed calls. Worth 3 minutes?"</td></tr><tr><td>7</td><td>Email #2</td><td>Case study: "How [Similar Plumbing Co] captured $14K in missed jobs last month"</td></tr><tr><td>14</td><td>Breakup email</td><td>"Haven't heard back — if call capture isn't a priority right now, I'll stop reaching out. If it is, here's my calendar."</td></tr></tbody></table></div>
+<h4>Cold Call Script (60 seconds)</h4>
+<pre><code class="language-">
+"Hey [Name], this is [Your Name]. I know you weren't expecting my call — 
+can I have 30 seconds?
+
+I work with plumbing companies on one thing: capturing the calls they're 
+losing to voicemail. Most shops I talk to miss 30-40% of their after-hours 
+and weekend calls. Those are emergency jobs — burst pipes, sewage backups — 
+walking to the next guy who answers.
+
+I don't sell ads. I built a system that answers every call, transcribes the 
+voicemail, texts the customer back in under 60 seconds, and books the job.
+
+Would you be open to seeing it in action? Takes 5 minutes."
+</code></pre>
+<p><strong>Key:</strong> Don't pitch the agency. Pitch the outcome. The demo sells the product.</p>
+<hr>
+<h3 id="the-demo-5-minutes">The Demo (5 Minutes)</h3>
+<p>This is your unfair advantage. Do NOT send a deck. Do NOT do a screen share of slides.</p>
+<h4>Demo Flow</h4>
+<li class="numbered">1. <strong>"Call this number: [Your Twilio Number]"</strong> — Have them call it live. Put them on speaker.</li>
+<li class="numbered">2. <strong>Let it go to voicemail.</strong> They leave a fake plumbing emergency message.</li>
+<li class="numbered">3. <strong>Within 60 seconds</strong> — their phone buzzes with a text: <em>"Hi, we received your call about [what they said]. Can we send a plumber? Reply YES to get scheduled."</em></li>
+<li class="numbered">4. <strong>Show the dashboard</strong> — their call appears in the log, transcribed, classified, attributed.</li>
+<li class="numbered">5. <strong>"That's what happens to every missed call your shop gets. The ones going to voicemail right now. How many do you think that is per month?"</strong></li>
+<p>Let them do the mental math. You've just proven the value in real time.</p>
+<h4>Why This Works</h4>
+<li><strong>Zero abstraction.</strong> They just experienced the product, not a description of it.</li>
+<li><strong>Emotional hook.</strong> They just watched a "lost" call get captured. Now they're thinking about their OWN lost calls.</li>
+<li><strong>Instant credibility.</strong> You're not promising. You're demonstrating.</li>
+<li><strong>No competitor can match this.</strong> Every other agency sends a PDF deck. You make their phone buzz.</li>
+<hr>
+<h3 id="objection-handling">Objection Handling</h3>
+<div class="table-wrap"><table><thead><tr><th>Objection</th><th>Response</th></tr></thead><tbody><tr><td>"We already have an answering service"</td><td>"Does it text the customer back in 60 seconds? Does it book into your CRM automatically? Does it tell you which calls turned into revenue and which didn't? If not, you're still leaking."</td></tr><tr><td>"It's too expensive"</td><td>"Let's do the math. How many calls do you miss per month? [Wait for answer] At your average ticket of [$X], if we capture just [Y] of those, that's [$Z] in revenue. Our retainer is less than half of that. You're cash-flow positive in month one."</td></tr><tr><td>"I need to think about it"</td><td>"Totally fair. While you think, can I set up the missed-call capture on a trial basis? No commitment. I'll route a test number, we run it for 2 weeks, and you see how many calls you're actually losing. No cost. If the data surprises you, we talk."</td></tr><tr><td>"We use ServiceTitan, it already does this"</td><td>"ServiceTitan is great for dispatching. But it doesn't answer the phone at 2 AM, transcribe the voicemail, text the customer back, and book the job — all before you wake up. We sit on top of ServiceTitan, not instead of it."</td></tr><tr><td>"My wife/dispatcher handles calls"</td><td>"And when they're asleep? Or on another call? Or it's Sunday? Every missed call is a job your competitor got. We're the safety net, not the replacement."</td></tr></tbody></table></div>
+<hr>
+<h3 id="sales-cadence-dailyweekly">Sales Cadence (Daily/Weekly)</h3>
+<div class="table-wrap"><table><thead><tr><th>Activity</th><th>Daily</th><th>Weekly</th></tr></thead><tbody><tr><td>Cold calls</td><td>20-30</td><td>100-150</td></tr><tr><td>Emails sent (automated sequence)</td><td>—</td><td>50-100</td></tr><tr><td>Demos booked</td><td>Target: 1-2</td><td>Target: 5-8</td></tr><tr><td>Demos completed</td><td>—</td><td>3-5</td></tr><tr><td>Follow-ups</td><td>5-10</td><td>25-50</td></tr><tr><td>**Close rate target:** 25-33% of demos</td><td>—</td><td>**1-2 new clients/week**</td></tr></tbody></table></div>
+<hr>
+<h3 id="first-5-clients--manual-override">First 5 Clients — Manual Override</h3>
+<p>For the first 5 clients, do things that don't scale:</p>
+<li class="numbered">1. <strong>Offer a 14-day free trial</strong> — route a test number, run it live, show them the data. Hard to say no to "it's already working, here are the 12 calls we captured this week."</li>
+<li class="numbered">2. <strong>Do the onboarding yourself.</strong> Sit in their office for a day. Learn their dispatch flow. Configure everything.</li>
+<li class="numbered">3. <strong>Overdeliver on reporting.</strong> Week 1: "Here are the 8 emergency calls we captured. Here's what they would have cost you." Week 2: "Here's the trend."</li>
+<li class="numbered">4. <strong>Ask for referrals.</strong> After 30 days of proven results: "Is there another plumbing company owner you respect who's losing calls the same way?"</li>
+<hr>
+<h3 id="geo-expansion">Geo Expansion</h3>
+<p>Once you own one metro (10+ clients, word-of-mouth referrals organic):</p>
+<li class="numbered">1. <strong>Pick the next geo</strong> using the same Apollo criteria</li>
+<li class="numbered">2. <strong>Hire a local SDR</strong> in that geo (knows the market, owns the outreach)</li>
+<li class="numbered">3. <strong>Reference clients in Geo 1</strong> — "We're handling [X] plumbing companies in [City 1], capturing [Y] calls/month. Same model works here."</li>
+<li class="numbered">4. <strong>Repeat.</strong></li>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Offer Stack | Plumbing Agency — Tech Stack | Plumbing Agency — Operations</p>
+
+<!-- OPERATIONS -->
+<h2 id="operations">Operations &amp; Fulfillment</h2>
+<h2>Plumbing Agency — Operations</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** The product works when you're asleep. Operations makes sure clients never notice you're a one-person shop.</blockquote>
+<hr>
+<h3 id="operating-model">Operating Model</h3>
+<pre><code class="language-">
+┌─────────────────────────────────────────────────────────┐
+│                    YOU (Founder)                         │
+│  Sales, Demo, Strategy, Client Relationships             │
+├─────────────────────────────────────────────────────────┤
+│  VA (Month 3)          │  Tech Pipeline (Automated)      │
+│  Onboarding support     │  Call capture → transcribe      │
+│  Client check-ins       │  → classify → text-back        │
+│  Dashboard updates      │  → book → CRM → report         │
+│  Billing/invoicing      │                                │
+├─────────────────────────────────────────────────────────┤
+│  Contractor (as needed) │  Contractor (as needed)         │
+│  CRM integrations       │  LLM prompt tuning              │
+│  Custom dashboard work  │  New feature builds             │
+└─────────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h3 id="client-lifecycle">Client Lifecycle</h3>
+<h4>Onboarding (Week 1 — YOU)</h4>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Action</th><th>Deliverable</th></tr></thead><tbody><tr><td>1</td><td>Kickoff call: learn their dispatch flow, CRM, after-hours protocol</td><td>Process map</td></tr><tr><td>2</td><td>Configure Twilio number forwarding. Test end-to-end.</td><td>Working capture pipeline</td></tr><tr><td>3</td><td>Train their dispatchers: "here's what changes, here's what doesn't"</td><td>Training doc + Loom</td></tr><tr><td>4</td><td>Go live. Monitor first 24 hours manually.</td><td>Live pipeline</td></tr><tr><td>5</td><td>Review first batch of captured calls with owner.</td><td>First results report</td></tr><tr><td>7</td><td>1-week check-in: what's working, what's not, tune the classifier</td><td>Optimization pass</td></tr></tbody></table></div>
+<h4>Ongoing Fulfillment (Weeks 2+)</h4>
+<div class="table-wrap"><table><thead><tr><th>Cadence</th><th>Activity</th><th>Owner</th></tr></thead><tbody><tr><td>Daily</td><td>Monitor pipeline health: all webhooks firing? Text-backs delivering?</td><td>Automated + VA check</td></tr><tr><td>Weekly</td><td>Pull dashboard report: calls received, missed, captured, booked, revenue</td><td>Automated → VA formats</td></tr><tr><td>Weekly</td><td>Send client "Week in Review" email: 3 key numbers + 1 insight</td><td>VA drafts, you approve</td></tr><tr><td>Monthly</td><td>Strategy call: review metrics, discuss optimizations, upsell Tier 2/3</td><td>You (30 min)</td></tr><tr><td>Quarterly</td><td>Business review: LTV/CAC, capture rate trend, expansion opportunities</td><td>You (60 min)</td></tr><tr><td>As needed</td><td>CRM integration updates, classifier retuning, feature requests</td><td>You or contractor</td></tr></tbody></table></div>
+<hr>
+<h3 id="client-success-playbook">Client Success Playbook</h3>
+<h4>Red Flags (Act Immediately)</h4>
+<div class="table-wrap"><table><thead><tr><th>Signal</th><th>Response</th></tr></thead><tbody><tr><td>Capture rate drops below baseline</td><td>Check Twilio webhooks, test call, verify forwarding still active</td></tr><tr><td>Client stops opening weekly reports</td><td>Personal check-in call: "Haven't heard from you — everything working as expected?"</td></tr><tr><td>Client asks about "ROI" or "value"</td><td>Pull the last 30 days of attributed revenue. Show them. The math is the defense.</td></tr><tr><td>Client mentions competitor</td><td>Ask what they're offering. Match the feature or reframe on your edge.</td></tr></tbody></table></div>
+<h4>Retention Anchors</h4>
+<li class="numbered">1. <strong>The data IS the moat.</strong> After 6 months, their entire lead pipeline lives in your system. Leaving means losing attribution history, customer follow-up sequences, and maintenance reminders. Switching cost is real.</li>
+<li class="numbered">2. <strong>Quarterly wins.</strong> Every QBR, show them at least one number that got better because of you. Capture rate up 5%. Revenue per call up $50. Churn down 2%. Always have a win.</li>
+<li class="numbered">3. <strong>Personal relationship.</strong> You're not a SaaS. You talk to the owner monthly. You know their business. You're the first person they call when something breaks.</li>
+<hr>
+<h3 id="reporting-cadence">Reporting Cadence</h3>
+<h4>Weekly Client Report (Email)</h4>
+<pre><code class="language-">
+Subject: [Company Name] — Week of [Date] Pipeline Report
+
+Calls received:    142
+Calls captured:     48  (33.8%)
+Calls missed:       12  (8.4%)  ← down from 38% pre-us
+Jobs booked:        39
+Revenue attributed: $31,200
+
+🔥 Top Insight: Emergency calls (burst pipe, sewage) convert at 92%.
+Consider adding a "water heater inspection" upsell to routine calls —
+those converted at only 18%.
+
+[Link to full dashboard]
+</code></pre>
+<h4>Monthly Internal Review (for YOU)</h4>
+<li>MRR: actual vs. target</li>
+<li>Client count: net new, churn</li>
+<li>Avg retainer: trending up or down?</li>
+<li>Pipeline health: any tech issues this month?</li>
+<li>Sales funnel: calls → demos → closes (conversion rate)</li>
+<li>Biggest operational headache — fix it</li>
+<hr>
+<h3 id="tools-&-systems">Tools & Systems</h3>
+<div class="table-wrap"><table><thead><tr><th>Function</th><th>Tool</th><th>Cost</th></tr></thead><tbody><tr><td>Project management</td><td>Notion or Linear</td><td>Free</td></tr><tr><td>Client CRM (your business)</td><td>Close.com or Pipedrive</td><td>$50-100/mo</td></tr><tr><td>Billing / invoicing</td><td>Stripe + Stripe Billing</td><td>2.9% + $0.30</td></tr><tr><td>Contract signing</td><td>Docusign or PandaDoc</td><td>$15-25/mo</td></tr><tr><td>Internal comms</td><td>Slack (free)</td><td>$0</td></tr><tr><td>Client dashboard</td><td>Custom (Streamlit) or Metabase</td><td>Hosting cost only</td></tr><tr><td>Knowledge base</td><td>Notion (client-facing docs)</td><td>Free</td></tr><tr><td>Scheduling</td><td>Cal.com (self-hosted)</td><td>Free</td></tr></tbody></table></div>
+<hr>
+<h3 id="the-first-90-days--founder's-operating-rhythm">The First 90 Days — Founder's Operating Rhythm</h3>
+<div class="table-wrap"><table><thead><tr><th>Block</th><th>Hours/Week</th><th>Activity</th></tr></thead><tbody><tr><td>Sales</td><td>20</td><td>Cold calls, demos, follow-ups</td></tr><tr><td>Tech</td><td>10</td><td>Building, debugging, deploying</td></tr><tr><td>Client fulfillment</td><td>5</td><td>Onboarding, check-ins, reporting</td></tr><tr><td>Admin</td><td>5</td><td>Billing, contracts, legal, ops</td></tr><tr><td>**Total**</td><td>**40**</td><td></td></tr></tbody></table></div>
+<p>After Month 3: VA takes client fulfillment + admin (freeing 10 hrs/week → more sales).</p>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Sales & Acquisition | Plumbing Agency — Hiring | Plumbing Agency — Financial Model</p>
+
+<!-- HIRING -->
+<h2 id="hiring">Hiring &amp; Team Structure</h2>
+<h2>Plumbing Agency — Hiring</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** Hire for leverage, not for company. Every hire should free you to do higher-value work.</blockquote>
+<hr>
+<h3 id="hiring-sequence">Hiring Sequence</h3>
+<pre><code class="language-">
+Month 0-2:  YOU (everything)
+Month 3:    VA (Philippines/LATAM) — fulfillment + admin
+Month 6:    SDR #1 — outbound sales (once you've proven the model)
+Month 9:    Tech support / junior dev — pipeline maintenance, integrations
+Month 12:   Account manager — client success for Tier 2/3 clients
+Month 18:   SDR #2 — second geo expansion
+</code></pre>
+<hr>
+<h3 id="role-#1-virtual-assistant--month-3">Role #1: Virtual Assistant — Month 3</h3>
+<p><strong>Trigger:</strong> You have 3+ clients and spend >10 hrs/week on non-sales work.</p>
+<h4>What They Do</h4>
+<div class="table-wrap"><table><thead><tr><th>Responsibility</th><th>Hours/Week</th><th>Details</th></tr></thead><tbody><tr><td>Client onboarding support</td><td>5</td><td>Follow onboarding checklist, configure basic Twilio settings, test pipelines</td></tr><tr><td>Weekly report generation</td><td>3</td><td>Pull dashboard data, format email, send to client (you approve first month)</td></tr><tr><td>Pipeline monitoring</td><td>5</td><td>Check webhook health daily, verify text-backs delivering, flag issues</td></tr><tr><td>Billing & invoicing</td><td>2</td><td>Send invoices via Stripe, follow up on late payments</td></tr><tr><td>Apollo list building</td><td>5</td><td>Generate fresh lead lists, enrich data, load into outreach sequence</td></tr><tr><td>Admin / misc</td><td>5</td><td>Contract prep, scheduling, research tasks</td></tr><tr><td>**Total**</td><td>**25**</td><td></td></tr></tbody></table></div>
+<h4>Hiring Spec</h4>
+<li><strong>Location:</strong> Philippines, LATAM, or Eastern Europe (timezone overlap with US)</li>
+<li><strong>English:</strong> Fluent written, conversational spoken</li>
+<li><strong>Tech:</strong> Comfortable with SaaS tools (Notion, Stripe, Apollo, Google Sheets). No coding required.</li>
+<li><strong>Rate:</strong> $6-10/hr (Philippines) / $8-15/hr (LATAM)</li>
+<li><strong>Monthly cost:</strong> $1,000-$2,000</li>
+<li><strong>Where to find:</strong> OnlineJobs.ph, Upwork, Athena, BruntWork</li>
+<h4>Interview Process</h4>
+<li class="numbered">1. <strong>Written application</strong> — "Tell me about a time you learned a new software tool to solve a problem."</li>
+<li class="numbered">2. <strong>Paid test task</strong> — Give them a real Apollo list build. Time them. Grade accuracy. ($50 for 2 hours)</li>
+<li class="numbered">3. <strong>Video interview</strong> — Communication clarity, reliability signals, availability</li>
+<li class="numbered">4. <strong>Trial week</strong> — Part-time, paid. Handle real client reports with your oversight.</li>
+<hr>
+<h3 id="role-#2-sdr-sales-development-rep--month-6">Role #2: SDR (Sales Development Rep) — Month 6</h3>
+<p><strong>Trigger:</strong> You've closed 5+ clients, your outreach process is documented, and you're the bottleneck on sales volume.</p>
+<h4>What They Do</h4>
+<div class="table-wrap"><table><thead><tr><th>Responsibility</th><th>Hours/Week</th><th>Details</th></tr></thead><tbody><tr><td>Cold calls</td><td>15</td><td>100-150 calls/week using your script</td></tr><tr><td>Email/SMS sequences</td><td>5</td><td>Load leads into sequences, monitor replies</td></tr><tr><td>Demo booking</td><td>5</td><td>Schedule qualified demos on your calendar</td></tr><tr><td>CRM hygiene</td><td>3</td><td>Update lead status, notes, follow-ups</td></tr><tr><td>List building</td><td>2</td><td>Refine Apollo searches, test new segments</td></tr><tr><td>**Total**</td><td>**30**</td><td></td></tr></tbody></table></div>
+<h4>Hiring Spec</h4>
+<li><strong>Location:</strong> US-based (must sound native on calls)</li>
+<li><strong>Experience:</strong> 1+ years outbound B2B sales (home services a plus but not required)</li>
+<li><strong>Key trait:</strong> Resilient. Volume-driven. Can handle rejection.</li>
+<li><strong>Comp:</strong> $40-50K base + $100/demo-attended + $250/client-closed commission</li>
+<li><strong>Monthly cost:</strong> $4,000-5,500 (base) + $1,500-3,000 (commission)</li>
+<li><strong>Where to find:</strong> LinkedIn, Indeed, Bravado, commission-only sales groups</li>
+<h4>Ramp Plan</h4>
+<div class="table-wrap"><table><thead><tr><th>Week</th><th>Activity</th></tr></thead><tbody><tr><td>1</td><td>Shadow your calls, learn the script, study the product</td></tr><tr><td>2</td><td>Make calls with you listening, live coaching</td></tr><tr><td>3</td><td>Independent calls, daily debrief, conversion tracking</td></tr><tr><td>4</td><td>Full quota: 100-150 calls/week, target 5-8 demos booked</td></tr></tbody></table></div>
+<p><strong>Kill switch:</strong> If they can't book 3 demos/week by Week 4, replace them. Sales is measurable. Don't wait.</p>
+<hr>
+<h3 id="role-#3-tech-support--junior-dev--month-9">Role #3: Tech Support / Junior Dev — Month 9</h3>
+<p><strong>Trigger:</strong> Pipeline issues interrupt your sales time, or client count exceeds what you can support solo.</p>
+<h4>What They Do</h4>
+<li>Monitor pipeline health, respond to alerts</li>
+<li>Debug webhook failures, Twilio config issues</li>
+<li>Build new CRM integrations (ServiceTitan → Housecall Pro → Jobber)</li>
+<li>Maintain and improve the dashboard</li>
+<li>Handle client technical onboarding</li>
+<li>Tune LLM classifiers for new client verticals</li>
+<h4>Hiring Spec</h4>
+<li><strong>Location:</strong> Anywhere (remote)</li>
+<li><strong>Stack:</strong> Python, FastAPI, Twilio, basic DevOps (Railway/VPS, health checks)</li>
+<li><strong>Experience:</strong> 2-4 years. Full-stack capable, API integration experience.</li>
+<li><strong>Comp:</strong> $60-80K (offshore) / $100-120K (US)</li>
+<li><strong>Monthly cost:</strong> $5,000-$10,000</li>
+<li><strong>Where to find:</strong> Wellfound (AngelList), YC Work at a Startup, LinkedIn, Toptal</li>
+<hr>
+<h3 id="role-#4-account-manager--month-12">Role #4: Account Manager — Month 12</h3>
+<p><strong>Trigger:</strong> 15+ clients, you're doing 15 hours/month of strategy calls and can't grow.</p>
+<h4>What They Do</h4>
+<li>Monthly strategy calls (replaces you)</li>
+<li>Quarterly business reviews</li>
+<li>Upsell Tier 2 → Tier 3</li>
+<li>Renewal management</li>
+<li>Churn risk detection and intervention</li>
+<li>Client feedback → product roadmap</li>
+<h4>Hiring Spec</h4>
+<li><strong>Location:</strong> US-based (client-facing)</li>
+<li><strong>Experience:</strong> 2+ years customer success or account management (SaaS or agency)</li>
+<li><strong>Comp:</strong> $60-70K base + retention bonus + upsell commission</li>
+<li><strong>Monthly cost:</strong> $5,000-7,000</li>
+<hr>
+<h3 id="compensation-philosophy">Compensation Philosophy</h3>
+<div class="table-wrap"><table><thead><tr><th>Principle</th><th>Rationale</th></tr></thead><tbody><tr><td>**Base covers bills, commission drives behavior.**</td><td>SDRs get base + per-demo + per-close. They control their income.</td></tr><tr><td>**Retention bonus for account managers.**</td><td>Quarterly bonus tied to client retention rate. Aligns incentives.</td></tr><tr><td>**Contractors before employees.**</td><td>VA, junior dev start as contractors. Convert to employee at 6+ months if great.</td></tr><tr><td>**Profit share at 2+ years.**</td><td>Key people get 1-3% profit share. Makes leaving expensive.</td></tr></tbody></table></div>
+<hr>
+<h3 id="org-chart-at-12-months">Org Chart at 12 Months</h3>
+<pre><code class="language-">
+                    YOU (CEO)
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+    SDR (Sales)    Account Mgr     Tech / Jr Dev
+    $65K OTE       $70K base       $80K
+                        │
+                    VA (Ops)
+                    $15K
+</code></pre>
+<p><strong>Headcount:</strong> 4 | <strong>Monthly payroll:</strong> ~$22K | <strong>Clients needed to cover:</strong> ~11 at $2,500 avg</p>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Operations | Plumbing Agency — Financial Model</p>
+
+<!-- FINANCIAL -->
+<h2 id="financial-model">Financial Model</h2>
+<h2>Plumbing Agency — Financial Model</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** Low fixed costs, high gross margin, recurring revenue. This is a fund-grade unit-economics machine.</blockquote>
+<hr>
+<h3 id="key-assumptions">Key Assumptions</h3>
+<div class="table-wrap"><table><thead><tr><th>Variable</th><th>Conservative</th><th>Target</th><th>Aggressive</th></tr></thead><tbody><tr><td>Avg retainer (MRR/client)</td><td>$2,000</td><td>$2,500</td><td>$3,000</td></tr><tr><td>Setup fee (one-time)</td><td>$1,500</td><td>$2,500</td><td>$4,000</td></tr><tr><td>Client acquisition cost (CAC)</td><td>$800</td><td>$500</td><td>$300</td></tr><tr><td>Months to close (from first touch)</td><td>1.5</td><td>1.0</td><td>0.5</td></tr><tr><td>Monthly churn rate</td><td>8%</td><td>5%</td><td>3%</td></tr><tr><td>Client lifetime (months)</td><td>12.5</td><td>20</td><td>33</td></tr></tbody></table></div>
+<p>CAC breakdown: Apollo ($50/mo), Twilio test numbers ($15/client), demo time (your labor — not cash). Very low compared to paid-ad models.</p>
+<hr>
+<h3 id="monthly-p&l-projection-conservative-case">Monthly P&L Projection (Conservative Case)</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th>Month 1</th><th>Month 2</th><th>Month 3</th><th>Month 4</th><th>Month 6</th><th>Month 12</th></tr></thead><tbody><tr><td>**Revenue**</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>New clients</td><td>1</td><td>2</td><td>2</td><td>3</td><td>3</td><td>4</td></tr><tr><td>Total clients</td><td>1</td><td>3</td><td>4</td><td>6</td><td>10</td><td>20</td></tr><tr><td>MRR</td><td>$2,000</td><td>$5,500</td><td>$8,000</td><td>$12,000</td><td>$20,000</td><td>$40,000</td></tr><tr><td>Setup fees</td><td>$1,500</td><td>$3,000</td><td>$3,000</td><td>$4,500</td><td>$7,500</td><td>$10,000</td></tr><tr><td>**Total Revenue**</td><td>**$3,500**</td><td>**$8,500**</td><td>**$11,000**</td><td>**$16,500**</td><td>**$27,500**</td><td>**$50,000**</td></tr><tr><td>**Costs**</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tech stack (Twilio, Deepgram, etc.)</td><td>$50</td><td>$100</td><td>$150</td><td>$200</td><td>$350</td><td>$700</td></tr><tr><td>Apollo / sales tools</td><td>$50</td><td>$50</td><td>$100</td><td>$100</td><td>$100</td><td>$150</td></tr><tr><td>VPS / hosting</td><td>$10</td><td>$10</td><td>$10</td><td>$20</td><td>$40</td><td>$80</td></tr><tr><td>Contractor (integrations)</td><td>$0</td><td>$500</td><td>$500</td><td>$500</td><td>$1,000</td><td>$1,000</td></tr><tr><td>VA (Month 3)</td><td>$0</td><td>$0</td><td>$1,500</td><td>$1,500</td><td>$1,500</td><td>$1,500</td></tr><tr><td>SDR (Month 6)</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$5,000</td><td>$5,500</td></tr><tr><td>Account Manager (Month 12)</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$5,500</td></tr><tr><td>Misc (legal, tools, insurance)</td><td>$200</td><td>$200</td><td>$300</td><td>$400</td><td>$500</td><td>$800</td></tr><tr><td>**Total Costs**</td><td>**$310**</td><td>**$860**</td><td>**$2,560**</td><td>**$2,720**</td><td>**$8,490**</td><td>**$15,230**</td></tr><tr><td>**Net Income**</td><td>**$3,190**</td><td>**$7,640**</td><td>**$8,440**</td><td>**$13,780**</td><td>**$19,010**</td><td>**$34,770**</td></tr><tr><td>**Margin**</td><td>91%</td><td>90%</td><td>77%</td><td>84%</td><td>69%</td><td>70%</td></tr></tbody></table></div>
+<hr>
+<h3 id="breakeven-&-runway">Breakeven & Runway</h3>
+<li><strong>Cash breakeven: Month 1</strong> — costs are so low (<$350 in Month 1) that even 1 client covers everything.</li>
+<li><strong>Founder-pay breakeven ($8K/mo draw): Month 2-3</strong> — need ~4 clients.</li>
+<li><strong>Personal runway needed: $5,000</strong> — covers tech setup + 2 months of personal expenses before revenue hits.</li>
+<li><strong>No outside capital required.</strong> This is a $5K bootstrap.</li>
+<hr>
+<h3 id="unit-economics-per-client">Unit Economics (Per Client)</h3>
+<div class="table-wrap"><table><thead><tr><th>Metric</th><th>Tier 1</th><th>Tier 2 ⭐</th><th>Tier 3</th></tr></thead><tbody><tr><td>Monthly retainer</td><td>$1,500</td><td>$2,500</td><td>$4,000</td></tr><tr><td>Setup fee</td><td>$1,500</td><td>$2,500</td><td>$4,000</td></tr><tr><td>Monthly tech cost</td><td>~$15</td><td>~$30</td><td>~$50</td></tr><tr><td>Monthly support cost</td><td>~$100</td><td>~$150</td><td>~$200</td></tr><tr><td>**Gross margin**</td><td>**92%**</td><td>**93%**</td><td>**94%**</td></tr><tr><td>Avg lifetime (months)</td><td>14</td><td>20</td><td>24</td></tr><tr><td>**LTV**</td><td>**$21,000**</td><td>**$50,000**</td><td>**$96,000**</td></tr><tr><td>CAC</td><td>$500</td><td>$600</td><td>$800</td></tr><tr><td>**LTV:CAC**</td><td>**42:1**</td><td>**83:1**</td><td>**120:1**</td></tr></tbody></table></div>
+<p>These are fund-grade numbers. For context: a healthy SaaS does 5:1 LTV:CAC. You're at 42-120:1. The "tech" here is mostly API calls with near-zero marginal cost.</p>
+<hr>
+<h3 id="revenue-scenarios-12-month">Revenue Scenarios (12-Month)</h3>
+<div class="table-wrap"><table><thead><tr><th>Scenario</th><th>MRR at Month 12</th><th>ARR</th><th>Team Size</th><th>Founder Comp</th></tr></thead><tbody><tr><td>**Conservative** (5% churn, $2K avg)</td><td>$40,000</td><td>$480,000</td><td>3 (VA + SDR)</td><td>$200K</td></tr><tr><td>**Target** (5% churn, $2.5K avg)</td><td>$62,500</td><td>$750,000</td><td>4</td><td>$300K</td></tr><tr><td>**Aggressive** (3% churn, $3K avg)</td><td>$96,000</td><td>$1,152,000</td><td>5</td><td>$450K</td></tr></tbody></table></div>
+<hr>
+<h3 id="cash-flow-note">Cash Flow Note</h3>
+<p>You're collecting MRR 30 days before tech costs hit. Twilio bills net-30. There's no inventory. There's no COGS beyond API calls. This means:</p>
+<li><strong>Cash conversion cycle: negative</strong> — you get paid before you pay vendors.</li>
+<li><strong>No working capital needed</strong> — the business funds itself from Day 1.</li>
+<li><strong>Every new client immediately improves cash position.</strong></li>
+<hr>
+<h3 id="when-to-raise-if-ever">When to Raise (If Ever)</h3>
+<p>You don't need to. But if you want to accelerate:</p>
+<div class="table-wrap"><table><thead><tr><th>Milestone</th><th>What It Unlocks</th><th>Raise Size</th></tr></thead><tbody><tr><td>$20K MRR, 10 clients, proven CAC</td><td>Hire 5 SDRs, attack 3 geos simultaneously</td><td>$500K pre-seed</td></tr><tr><td>$50K MRR, 25 clients, 2 geos</td><td>Build full CRM replacement, hire engineering team</td><td>$2M seed</td></tr><tr><td>$150K MRR, 75 clients, 5+ geos</td><td>Expand to HVAC + Roofing, build multi-vertical platform</td><td>$10M Series A</td></tr></tbody></table></div>
+<p><strong>The beauty:</strong> You never HAVE to raise. Every round is optional acceleration, not survival.</p>
+<hr>
+<h3 id="founder-personal-finance">Founder Personal Finance</h3>
+<div class="table-wrap"><table><thead><tr><th>Month</th><th>Business Net</th><th>Founder Draw</th><th>Reinvested</th></tr></thead><tbody><tr><td>1</td><td>$3,190</td><td>$0 (reinvest all)</td><td>$3,190</td></tr><tr><td>2</td><td>$7,640</td><td>$3,000</td><td>$4,640</td></tr><tr><td>3</td><td>$8,440</td><td>$5,000</td><td>$3,440</td></tr><tr><td>4</td><td>$13,780</td><td>$8,000</td><td>$5,780</td></tr><tr><td>5</td><td>$15,500</td><td>$10,000</td><td>$5,500</td></tr><tr><td>6</td><td>$19,010</td><td>$12,000</td><td>$7,010</td></tr></tbody></table></div>
+<p><strong>By Month 4, you're drawing $8K/mo with money left to reinvest.</strong> Annualized founder comp crosses $150K by Month 8.</p>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Offer Stack | Plumbing Agency — Hiring | Plumbing Agency — 90-Day Timeline</p>
+
+<!-- TIMELINE -->
+<h2 id="timeline">90-Day Execution Timeline</h2>
+<h2>Plumbing Agency — 90-Day Timeline</h2>
+<blockquote>**Parent:** [[Plumbing Agency — Game Plan]]</blockquote>
+<blockquote>**Principle:** Week-by-week execution. If it's not on the calendar, it doesn't exist.</blockquote>
+<hr>
+<h3 id="phase-0--pre-launch-this-week">Phase 0 — Pre-Launch (This Week)</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Action</th><th>Deliverable</th></tr></thead><tbody><tr><td>1</td><td>Buy Twilio number (target geo area code). Set up webhook endpoint.</td><td>Working phone number</td></tr><tr><td>2</td><td>Write the webhook handler: receive call → Deepgram transcribe → classify → SMS back</td><td>MVP pipeline (local)</td></tr><tr><td>3</td><td>Deploy to Railway/VPS. Test end-to-end.</td><td>Live pipeline</td></tr><tr><td>4</td><td>Set up Google Sheets lead log. Build Apollo search for Target Geo 1.</td><td>Lead list ready</td></tr><tr><td>5</td><td>Write outreach sequences (email + SMS). Load into your CRM.</td><td>Sequences live</td></tr></tbody></table></div>
+<p><strong>Checkpoint:</strong> Can you call your own number, leave a voicemail, and get a text back in <60 seconds? If yes → go. If no → fix before outreach.</p>
+<hr>
+<h3 id="week-1--pipe-is-live,-start-dialing">Week 1 — Pipe Is Live, Start Dialing</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>30 cold calls. Use the script.</td><td>3 conversations, 1 demo booked</td></tr><tr><td>Tue</td><td>30 cold calls + follow up yesterday's interest. Monitor pipeline health.</td><td>2 more conversations</td></tr><tr><td>Wed</td><td>30 cold calls. Refine script based on what's working.</td><td>1-2 demos booked</td></tr><tr><td>Thu</td><td>25 cold calls. First demo (if booked).</td><td>Complete 1 demo</td></tr><tr><td>Fri</td><td>25 cold calls. Pipeline health review. Prep next week's lead batch.</td><td>Clean CRM</td></tr><tr><td>**Total**</td><td>**140 calls, 2-3 demos booked, 1 demo completed**</td><td></td></tr></tbody></table></div>
+<p><strong>Milestone:</strong> First live demo completed. Even if it doesn't close, you've validated the demo format.</p>
+<hr>
+<h3 id="week-2--demo-mode">Week 2 — Demo Mode</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>25 calls + 2 demos</td><td>Demos done</td></tr><tr><td>Tue</td><td>25 calls + follow-ups from last week</td><td>1 new demo booked</td></tr><tr><td>Wed</td><td>25 calls + 1 demo</td><td>Demo done</td></tr><tr><td>Thu</td><td>20 calls + send proposals to interested demos</td><td>Proposals out</td></tr><tr><td>Fri</td><td>20 calls + pipeline review. Tune classifier based on real voicemails.</td><td>Optimize</td></tr><tr><td>**Total**</td><td>**115 calls, 3-4 demos, 2-3 proposals out**</td><td></td></tr></tbody></table></div>
+<p><strong>Milestone:</strong> First proposal sent. Pipeline metrics emerging: calls→conversations→demos→proposals conversion rates.</p>
+<hr>
+<h3 id="week-3--first-close-target">Week 3 — First Close Target</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>20 calls + follow up on proposals</td><td>Push to decision</td></tr><tr><td>Tue</td><td>20 calls + handle objections from proposals</td><td>Overcome "think about it"</td></tr><tr><td>Wed</td><td>15 calls + close attempt</td><td>**FIRST CLIENT**</td></tr><tr><td>Thu</td><td>Onboard Client #1. Configure their forwarding.</td><td>Client live</td></tr><tr><td>Fri</td><td>Pipeline review. Refine outreach based on what's converting.</td><td>Data review</td></tr><tr><td>**Total**</td><td>**75 calls + onboarding**</td><td>**1 client live**</td></tr></tbody></table></div>
+<p><strong>Milestone: 🎯 First paying client. $1,500-$2,500 MRR + setup fee.</strong></p>
+<hr>
+<h3 id="week-4--prove-the-model">Week 4 — Prove the Model</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>Client #1 1-week check-in. Pull their captured-call data.</td><td>Case study material</td></tr><tr><td>Tue</td><td>20 calls. Use Client #1 data in pitch: "We captured 8 calls this week for [Company]"</td><td>Social proof</td></tr><tr><td>Wed</td><td>20 calls + 1 demo</td><td>Demo done</td></tr><tr><td>Thu</td><td>15 calls + demo follow-up</td><td>Proposal out</td></tr><tr><td>Fri</td><td>15 calls. Weekly report to Client #1. Pipeline health.</td><td>Rapport</td></tr><tr><td>**Total**</td><td>**70 calls, 1-2 demos, 1 proposal**</td><td></td></tr></tbody></table></div>
+<p><strong>Milestone:</strong> First week of real client data. This is your most powerful sales weapon.</p>
+<hr>
+<h3 id="week-5--momentum">Week 5 — Momentum</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>20 calls. Use Client #1 case study in every pitch.</td><td>Conversations</td></tr><tr><td>Tue</td><td>20 calls + 1 demo</td><td>Demo done</td></tr><tr><td>Wed</td><td>20 calls</td><td>Pipeline fill</td></tr><tr><td>Thu</td><td>15 calls + close attempt on proposals</td><td>Client #2</td></tr><tr><td>Fri</td><td>Onboard Client #2 + Client #1 monthly check-in prep.</td><td></td></tr><tr><td>**Total**</td><td>**75 calls, 1-2 demos, 1 close**</td><td>**2 clients**</td></tr></tbody></table></div>
+<p><strong>Milestone: 2 clients, $3,000-$5,000 MRR. Pattern is working.</strong></p>
+<hr>
+<h3 id="week-6--the-inflection">Week 6 — The Inflection</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>20 calls</td><td>Pipeline</td></tr><tr><td>Tue</td><td>Apollo list refresh for Target Geo 1 (exhausted first batch?) or expand radius</td><td>New leads</td></tr><tr><td>Wed</td><td>20 calls + 1 demo</td><td>Demo done</td></tr><tr><td>Thu</td><td>15 calls + demo follow-up</td><td>Proposal</td></tr><tr><td>Fri</td><td>Client #1 and #2 weekly reports. System health check.</td><td>Ops</td></tr><tr><td>**Total**</td><td>**55 calls, 1-2 demos, 1 proposal**</td><td></td></tr></tbody></table></div>
+<p><strong>Milestone: 2 clients stable. Pipeline metrics clear. Sales process documented.</strong></p>
+<hr>
+<h3 id="week-7--client-#3">Week 7 — Client #3</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>20 calls. Pitch now polished — 6 weeks of iteration.</td><td>Conversations</td></tr><tr><td>Tue</td><td>20 calls + 1 demo</td><td>Demo done</td></tr><tr><td>Wed</td><td>15 calls + close attempt</td><td>Client #3</td></tr><tr><td>Thu</td><td>Onboard Client #3.</td><td>3 clients</td></tr><tr><td>Fri</td><td>Start writing standard operating procedures (SOPs) for onboarding + weekly reports.</td><td>VA prep</td></tr><tr><td>**Total**</td><td>**55 calls, 1 demo, 1 close**</td><td>**3 clients**</td></tr></tbody></table></div>
+<p><strong>Milestone: 3 clients, $4,500-$7,500 MRR. Time to hire a VA.</strong></p>
+<hr>
+<h3 id="week-8--build-for-scale">Week 8 — Build for Scale</h3>
+<div class="table-wrap"><table><thead><tr><th>Day</th><th>Activity</th><th>Target</th></tr></thead><tbody><tr><td>Mon</td><td>Post VA job on OnlineJobs.ph / Upwork.</td><td>Job live</td></tr><tr><td>Tue</td><td>15 calls. The funnel is working — shift time to ops + tech.</td><td>Pipeline maintenance</td></tr><tr><td>Wed</td><td>Build Phase 2 features: AI voice agent integration, CRM push.</td><td>Tech upgrade</td></tr><tr><td>Thu</td><td>15 calls + review VA applicants.</td><td>Screening</td></tr><tr><td>Fri</td><td>Client reports. System hardening: better error handling, monitoring.</td><td>Reliability</td></tr><tr><td>**Total**</td><td>**30 calls + tech build + hiring**</td><td></td></tr></tbody></table></div>
+<p><strong>Milestone: Shift from 100% sales → 60% sales, 25% tech, 15% ops.</strong></p>
+<hr>
+<h3 id="week-9-10--va-onboarded">Week 9-10 — VA Onboarded</h3>
+<div class="table-wrap"><table><thead><tr><th>Week</th><th>Activity</th><th>Milestone</th></tr></thead><tbody><tr><td>9</td><td>Interview VA candidates. Paid test task. Select hire.</td><td>VA hired</td></tr><tr><td>10</td><td>Train VA on onboarding, reports, pipeline monitoring. Shadow you for a week.</td><td>VA ramping</td></tr><tr><td>Both</td><td>25-30 calls/week. Maintain pipeline. Target Client #4.</td><td>4 clients</td></tr></tbody></table></div>
+<p><strong>Milestone: VA handling fulfillment. You're back to 25+ hrs/week on sales.</strong></p>
+<hr>
+<h3 id="week-11-12--the-compound">Week 11-12 — The Compound</h3>
+<div class="table-wrap"><table><thead><tr><th>Week</th><th>Activity</th><th>Milestone</th></tr></thead><tbody><tr><td>11</td><td>VA independent on reports + monitoring. You: 30 calls/week + demos.</td><td>Client #5</td></tr><tr><td>12</td><td>Quarterly review: 90-day metrics. Refine offer, pricing, outreach. Plan next 90 days.</td><td>**5 clients, $10-12.5K MRR**</td></tr></tbody></table></div>
+<hr>
+<h3 id="90-day-scorecard">90-Day Scorecard</h3>
+<div class="table-wrap"><table><thead><tr><th>Metric</th><th>Target</th><th>Stretch</th></tr></thead><tbody><tr><td>Clients</td><td>5</td><td>8</td></tr><tr><td>MRR</td><td>$10,000</td><td>$16,000</td></tr><tr><td>Setup fees collected</td><td>$12,500</td><td>$20,000</td></tr><tr><td>Total revenue (90 days)</td><td>~$42,500</td><td>~$68,000</td></tr><tr><td>Churn</td><td>0%</td><td>0%</td></tr><tr><td>Capture rate (client avg)</td><td>60%+ of missed calls</td><td>75%+</td></tr><tr><td>Team</td><td>You + VA</td><td>You + VA</td></tr><tr><td>Founder draw</td><td>$3,200/mo avg</td><td>$5,000/mo avg</td></tr></tbody></table></div>
+<hr>
+<h3 id="daily-non-negotiables">Daily Non-Negotiables</h3>
+<li class="numbered">1. <strong>Morning (8-11 AM):</strong> Cold calls. Peak decision-maker availability. No admin, no tech, no email.</li>
+<li class="numbered">2. <strong>Midday (11-1 PM):</strong> Demos. Book these in the AM calling block.</li>
+<li class="numbered">3. <strong>Afternoon (2-4 PM):</strong> Tech work. Pipeline improvements, bug fixes, integrations.</li>
+<li class="numbered">4. <strong>Late afternoon (4-5 PM):</strong> Admin. Client reports, billing, Apollo list refresh.</li>
+<li class="numbered">5. <strong>Evening (optional):</strong> Pipeline monitoring check. 5 minutes, not 2 hours.</li>
+<p><strong>One rule:</strong> Never let tech work bleed into morning call blocks. Sales is the oxygen. Tech without clients is a hobby.</p>
+<hr>
+<h3 id="risk-register">Risk Register</h3>
+<div class="table-wrap"><table><thead><tr><th>Risk</th><th>Probability</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td>Twilio outage</td><td>Low</td><td>High</td><td>UptimeRobot monitoring, SMS alert to you + client</td></tr><tr><td>Client churn in first 30 days</td><td>Medium</td><td>Medium</td><td>Over-communicate. Weekly reports. 2-week check-in call.</td></tr><tr><td>Objection: "ServiceTitan does this"</td><td>Medium</td><td>Medium</td><td>Demo shows the gap: real-time text-back + attribution they don't have</td></tr><tr><td>Can't book enough demos</td><td>Medium</td><td>High</td><td>Test different geos. Try different times. Record calls, improve script.</td></tr><tr><td>Tech breaks during demo</td><td>Low</td><td>High</td><td>Always test the pipeline 5 minutes before every demo.</td></tr><tr><td>Competitor enters with similar offer</td><td>Low</td><td>Medium</td><td>Your moat is the data + relationship, not the tech. Harder to copy.</td></tr><tr><td>Burnout</td><td>Medium</td><td>High</td><td>Strict 40-hour cap. Sunday off. This is a marathon.</td></tr></tbody></table></div>
+<hr>
+<h3 id="after-90-days-next-90">After 90 Days: Next 90</h3>
+<div class="table-wrap"><table><thead><tr><th>Priority</th><th>What</th></tr></thead><tbody><tr><td>1</td><td>Land 5 more clients (10 total, $20-25K MRR)</td></tr><tr><td>2</td><td>Hire SDR (Month 6 trigger)</td></tr><tr><td>3</td><td>Launch Geo 2 — pick second metro, repeat the playbook</td></tr><tr><td>4</td><td>Build Tier 3 features (full CRM replacement)</td></tr><tr><td>5</td><td>Cross-sell existing plumbing clients' HVAC divisions</td></tr><tr><td>6</td><td>Raise pre-seed (optional — $500K to accelerate geo expansion)</td></tr></tbody></table></div>
+<hr>
+<p>Plumbing Agency — Game Plan | Plumbing Agency — Sales & Acquisition | Plumbing Agency — Financial Model | Plumbing Agency — Operations</p>
+
+<hr>
+<p style="text-align:center; color:var(--text2); font-size:0.85rem; margin-top:3rem;">
+  Built from the Niche Selection Rubric · June 2, 2026<br>
+  <em>Plumbing composite: 7.28/10 — ranked ~#2, neck-and-neck with HVAC</em>
+</p>
+
+</main>
+</div>
+</div>
+</body>
+</html>
