@@ -557,7 +557,7 @@ p strong { color: var(--text); }
 </div>
 
 <script>
-const PW_HASH = 'c5a4e7e206155bde30b4c9e85e9e3b0e1a72c26c07c0f9b3c0e7f6d4e5e5a8b2';
+const PW_HASH = '38898cfcdeed6dbb529d3d13c4a552f621178039bb2ac29b4330c009a8835050';
 async function unlock() {
   const input = document.getElementById('pw-input').value;
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
