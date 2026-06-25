@@ -69,10 +69,11 @@ This is the same full-stack AI delivery model that scored the rubric's #1 (Med S
 ## Quick-Start: What to Do Right Now
 
 1. **This week:** Set up the [[Plumbing Agency — Tech Stack#Phase 1 — Missed-Call MVP (Week 1-3)|missed-call MVP]] — Twilio number → voice transcription → auto-text-back
-2. **This week:** Generate [[Plumbing Agency — Sales & Acquisition#Apollo List Build|Apollo lists]] for your first target geo (pick one metro, 50-100 plumbers)
-3. **Week 2:** Start outreach — the demo is the product itself (call your own Twilio number live)
-4. **Week 4:** Land first client, iterate the pipeline with real call data
-5. **Week 8:** 3 clients, $6-9K MRR, hire VA for fulfillment
+2. **This week:** Buy 5 sending domains + 15 Google Workspace inboxes + start Instantly.ai warmup. **Email is the door-opener; calls only close.**
+3. **This week:** Generate [[Plumbing Agency — Sales & Acquisition#Apollo List Build|Apollo lists]] for your first target geo (pick one metro, 200-400 plumbers)
+4. **Week 2:** Launch cold email sequences (75 leads/week × 7 touches). Phone only on positive email replies.
+5. **Week 3:** Land first client via warm email→demo pipeline, iterate copy with real data
+6. **Week 8:** 3 clients, $6-9K MRR, hire VA for fulfillment
 
 Everything below is detailed in the subpages. Start at [[Plumbing Agency — 90-Day Timeline]].
 

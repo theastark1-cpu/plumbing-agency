@@ -121,13 +121,14 @@ those converted at only 18%.
 
 | Block | Hours/Week | Activity |
 |-------|-----------|----------|
-| Sales | 20 | Cold calls, demos, follow-ups |
-| Tech | 10 | Building, debugging, deploying |
+| Email optimization + reply handling | 15 | Handle positive replies <5 min, A/B test subject lines, tune copy, scale volume |
+| Demos (phone, warm) | 10 | Live calls with email-warmed prospects. 5-8/week. |
+| Tech | 8 | Building, debugging, deploying (less time as system matures) |
 | Client fulfillment | 5 | Onboarding, check-ins, reporting |
-| Admin | 5 | Billing, contracts, legal, ops |
+| Admin | 2 | Billing, contracts, ops |
 | **Total** | **40** | |
 
-After Month 3: VA takes client fulfillment + admin (freeing 10 hrs/week → more sales).
+After Month 3: VA takes client fulfillment + admin (freeing 7 hrs/week → more email volume + demos).
 
 ---
 

@@ -1,7 +1,7 @@
 # Plumbing Agency — 90-Day Timeline
 
 > **Parent:** [[Plumbing Agency — Game Plan]]
-> **Principle:** Week-by-week execution. If it's not on the calendar, it doesn't exist.
+> **Principle:** Cold email is the door-opener. Calls only close. If it's not on the calendar, it doesn't exist.
 
 ---
 
@@ -9,43 +9,54 @@
 
 | Day | Action | Deliverable |
 |-----|--------|-------------|
-| 1 | Buy Twilio number (target geo area code). Set up webhook endpoint. | Working phone number |
-| 2 | Write the webhook handler: receive call → Deepgram transcribe → classify → SMS back | MVP pipeline (local) |
-| 3 | Deploy to Railway/VPS. Test end-to-end. | Live pipeline |
-| 4 | Set up Google Sheets lead log. Build Apollo search for Target Geo 1. | Lead list ready |
-| 5 | Write outreach sequences (email + SMS). Load into your CRM. | Sequences live |
+| 1 | Buy 5 sending domains (variations of your brand). Set up Google Workspace. | Domains registered |
+| 2 | Configure SPF + DKIM + DMARC. Connect to Instantly.ai. Start warmup on all 15 inboxes. | Infrastructure live |
+| 3 | Write Twilio missed-call webhook handler. Deploy to Railway. Test end-to-end. | Live pipeline |
+| 4 | Build Apollo list for Target Geo 1. Verify emails. Clean list. | 200-400 verified leads |
+| 5 | Write 7-email cold email sequence in Instantly. Load into 5 inboxes. Schedule launch for Day 8. | Sequences live |
 
-**Checkpoint:** Can you call your own number, leave a voicemail, and get a text back in <60 seconds? If yes → go. If no → fix before outreach.
+**Checkpoint:** Can you call your own Twilio number, leave a voicemail, and get a text back in <60 seconds? Have 15 inboxes warming at 5 emails/day? Both → go. Either broken → fix before launching.
 
----
-
-## Week 1 — Pipe Is Live, Start Dialing
-
-| Day | Activity | Target |
-|-----|----------|--------|
-| Mon | 30 cold calls. Use the script. | 3 conversations, 1 demo booked |
-| Tue | 30 cold calls + follow up yesterday's interest. Monitor pipeline health. | 2 more conversations |
-| Wed | 30 cold calls. Refine script based on what's working. | 1-2 demos booked |
-| Thu | 25 cold calls. First demo (if booked). | Complete 1 demo |
-| Fri | 25 cold calls. Pipeline health review. Prep next week's lead batch. | Clean CRM |
-| **Total** | **140 calls, 2-3 demos booked, 1 demo completed** | |
-
-**Milestone:** First live demo completed. Even if it doesn't close, you've validated the demo format.
+**Cold Email Infrastructure Cost (Monthly):**
+| Component | Cost |
+|-----------|------|
+| 5 domains ($12/yr each) | $5/mo |
+| 15 Google Workspace inboxes ($7 each) | $105/mo |
+| Instantly.ai (unlimited accounts) | $97/mo |
+| Apollo (paid tier for verification) | $49/mo |
+| **Total** | **~$256/mo** |
 
 ---
 
-## Week 2 — Demo Mode
+## Week 1 — Warmup + Test Send
 
 | Day | Activity | Target |
 |-----|----------|--------|
-| Mon | 25 calls + 2 demos | Demos done |
-| Tue | 25 calls + follow-ups from last week | 1 new demo booked |
-| Wed | 25 calls + 1 demo | Demo done |
-| Thu | 20 calls + send proposals to interested demos | Proposals out |
-| Fri | 20 calls + pipeline review. Tune classifier based on real voicemails. | Optimize |
-| **Total** | **115 calls, 3-4 demos, 2-3 proposals out** | |
+| Mon | Warmup running. Build lead magnet PDF (Missed-Call Audit). Apollo list refresh. | List: 200 verified leads |
+| Tue | Test send 5 emails/day/inbox. Monitor deliverability (Gmail, Outlook, Yahoo). | 75 sent, 0 bounce |
+| Wed | Check inbox placement via GlockApps/Mail Tester. Adjust if flagged. | 90%+ inbox placement |
+| Thu | Continue ramp (10/day/inbox). Begin reply monitoring in Slack. | First reply handling |
+| Fri | End-of-week review. What's working, what's not. Tune subject lines. | Cleaner list for Week 2 |
 
-**Milestone:** First proposal sent. Pipeline metrics emerging: calls→conversations→demos→proposals conversion rates.
+**Milestone:** Infrastructure proven. Deliverability green. First few replies handled.
+
+---
+
+## Week 2 — Full Launch
+
+| Day | Activity | Target |
+|-----|----------|--------|
+| Mon | **LAUNCH.** Send first sequence batch — 200 leads × 7-step sequence. | 1,400 emails queued |
+| Tue | Handle replies (warm intros from prior test sends). Send 200 follow-ups. | 5-10 replies handled |
+| Wed | Send Day-7 follow-ups for cohort 1. Review metrics: open rate, reply rate. | First real reply rate data |
+| Thu | Send Day-10 follow-ups. Process replies. Book first demos. | 1-2 demos booked |
+| Fri | Weekly review: open rate (target 40%+), reply rate (target 3%+). Tune copy. | Iterate copy |
+| **Total** | **~700 emails sent, 20+ replies expected, 1-2 demos booked** | |
+
+**Email Cadence Math (Week 2):**
+- 200 leads × 7 emails = 1,400 emails/week (across 15 inboxes = 93/day per inbox — too high)
+- **Reduce to 75 leads/week** = 525 emails/week = 35/day/inbox (safe)
+- Reply rate 3% = 16 replies. Positive 30% = 5 conversations. Close 25% = 1 client/week.
 
 ---
 
@@ -53,12 +64,12 @@
 
 | Day | Activity | Target |
 |-----|----------|--------|
-| Mon | 20 calls + follow up on proposals | Push to decision |
-| Tue | 20 calls + handle objections from proposals | Overcome "think about it" |
-| Wed | 15 calls + close attempt | **FIRST CLIENT** |
-| Thu | Onboard Client #1. Configure their forwarding. | Client live |
-| Fri | Pipeline review. Refine outreach based on what's converting. | Data review |
-| **Total** | **75 calls + onboarding** | **1 client live** |
+| Mon | Send Day-1 batch for Week 3 cohort (75 fresh leads). | 75 new leads |
+| Tue | Handle all replies from Week 2 sequences. Reply within <5 min to positives. | 5-8 conversations |
+| Wed | Send Day-4 follow-ups. **First demos via phone** (warm from email replies). | 1-2 demos |
+| Thu | Send Day-7 follow-ups. Close attempt on positive replies. | **FIRST CLIENT** |
+| Fri | Onboard Client #1. Configure their forwarding. | Client live |
+| **Total** | **~600 emails sent, 15-20 replies, 3-4 demos, 1 client** | **1 client live** |
 
 **Milestone: 🎯 First paying client. $1,500-$2,500 MRR + setup fee.**
 
@@ -69,43 +80,43 @@
 | Day | Activity | Target |
 |-----|----------|--------|
 | Mon | Client #1 1-week check-in. Pull their captured-call data. | Case study material |
-| Tue | 20 calls. Use Client #1 data in pitch: "We captured 8 calls this week for [Company]" | Social proof |
-| Wed | 20 calls + 1 demo | Demo done |
-| Thu | 15 calls + demo follow-up | Proposal out |
-| Fri | 15 calls. Weekly report to Client #1. Pipeline health. | Rapport |
-| **Total** | **70 calls, 1-2 demos, 1 proposal** | |
+| Tue | New cohort 75 leads. Tune subject lines based on Week 2-3 data. | Iterate |
+| Wed | Handle Week 3 reply backlog. Book demos. | 3-4 demos |
+| Thu | Demo delivery + close attempt. | 1 close |
+| Fri | Weekly report to Client #1. Process open replies. | Rapport + pipeline |
+| **Total** | **~600 emails, 15-20 replies, 3-4 demos, 1 close** | |
 
-**Milestone:** First week of real client data. This is your most powerful sales weapon.
+**Milestone:** First week of real client data. This becomes your most powerful email weapon — "We captured 47 calls for [Client] in their first month."
 
 ---
 
-## Week 5 — Momentum
+## Week 5 — Scale + Client #2
 
 | Day | Activity | Target |
 |-----|----------|--------|
-| Mon | 20 calls. Use Client #1 case study in every pitch. | Conversations |
-| Tue | 20 calls + 1 demo | Demo done |
-| Wed | 20 calls | Pipeline fill |
-| Thu | 15 calls + close attempt on proposals | Client #2 |
-| Fri | Onboard Client #2 + Client #1 monthly check-in prep. | |
-| **Total** | **75 calls, 1-2 demos, 1 close** | **2 clients** |
+| Mon | Add Client #1 case study to Email #2 template. New cohort 100 leads. | Scale to 100 |
+| Tue | Reply handling. Demo prep. | 3-4 demos |
+| Wed | Demos. | Conversions |
+| Thu | Close attempt. | **Client #2** |
+| Fri | Onboard #2. Update case study deck. | 2 clients stable |
+| **Total** | **~750 emails, 25 replies, 4 demos, 1 close** | **2 clients** |
 
 **Milestone: 2 clients, $3,000-$5,000 MRR. Pattern is working.**
 
 ---
 
-## Week 6 — The Inflection
+## Week 6 — Volume Ramp
 
 | Day | Activity | Target |
 |-----|----------|--------|
-| Mon | 20 calls | Pipeline |
-| Tue | Apollo list refresh for Target Geo 1 (exhausted first batch?) or expand radius | New leads |
-| Wed | 20 calls + 1 demo | Demo done |
-| Thu | 15 calls + demo follow-up | Proposal |
-| Fri | Client #1 and #2 weekly reports. System health check. | Ops |
-| **Total** | **55 calls, 1-2 demos, 1 proposal** | |
+| Mon | Scale to 150 leads/cohort. Increase inboxes sending. | 150/day |
+| Tue | Apollo list refresh for Target Geo 1 (exhaust first batch?) | Fresh leads |
+| Wed | Demo delivery. | 5 demos booked |
+| Thu | Demo follow-ups. | 1 close attempt |
+| Fri | Client weekly reports. System health check. | Ops stable |
+| **Total** | **~1,100 emails, 30+ replies, 5 demos** | |
 
-**Milestone: 2 clients stable. Pipeline metrics clear. Sales process documented.**
+**Milestone: 2 clients stable. Pipeline metrics clear. Sales process documented in templates.**
 
 ---
 
@@ -113,12 +124,12 @@
 
 | Day | Activity | Target |
 |-----|----------|--------|
-| Mon | 20 calls. Pitch now polished — 6 weeks of iteration. | Conversations |
-| Tue | 20 calls + 1 demo | Demo done |
-| Wed | 15 calls + close attempt | Client #3 |
-| Thu | Onboard Client #3. | 3 clients |
-| Fri | Start writing standard operating procedures (SOPs) for onboarding + weekly reports. | VA prep |
-| **Total** | **55 calls, 1 demo, 1 close** | **3 clients** |
+| Mon | Optimize subject lines. A/B test 2 new variants. | Better open rate |
+| Tue | New cohort 150 leads. Process replies. | Reply handling |
+| Wed | Demos booked. | 5 demos |
+| Thu | Close attempt. | **Client #3** |
+| Fri | Onboard #3. Start writing onboarding SOPs. | 3 clients, VA prep |
+| **Total** | **~1,100 emails, 30+ replies, 5 demos, 1 close** | **3 clients** |
 
 **Milestone: 3 clients, $4,500-$7,500 MRR. Time to hire a VA.**
 
@@ -129,11 +140,11 @@
 | Day | Activity | Target |
 |-----|----------|--------|
 | Mon | Post VA job on OnlineJobs.ph / Upwork. | Job live |
-| Tue | 15 calls. The funnel is working — shift time to ops + tech. | Pipeline maintenance |
-| Wed | Build Phase 2 features: AI voice agent integration, CRM push. | Tech upgrade |
-| Thu | 15 calls + review VA applicants. | Screening |
-| Fri | Client reports. System hardening: better error handling, monitoring. | Reliability |
-| **Total** | **30 calls + tech build + hiring** | |
+| Tue | Optimize inbox placement. Clean list of unengaged. | Hygiene |
+| Wed | Build Phase 2 features: AI voice agent, CRM push. | Tech upgrade |
+| Thu | Review VA applicants. | Screening |
+| Fri | Client reports. System hardening. | Reliability |
+| **Total** | **~1,100 emails, ops hardening + hiring** | |
 
 **Milestone: Shift from 100% sales → 60% sales, 25% tech, 15% ops.**
 
@@ -145,9 +156,9 @@
 |------|----------|-----------|
 | 9 | Interview VA candidates. Paid test task. Select hire. | VA hired |
 | 10 | Train VA on onboarding, reports, pipeline monitoring. Shadow you for a week. | VA ramping |
-| Both | 25-30 calls/week. Maintain pipeline. Target Client #4. | 4 clients |
+| Both | 1,100-1,500 emails/week. Target Client #4. | 4 clients |
 
-**Milestone: VA handling fulfillment. You're back to 25+ hrs/week on sales.**
+**Milestone: VA handling fulfillment. You're back to higher-leverage email + demo work.**
 
 ---
 
@@ -155,8 +166,8 @@
 
 | Week | Activity | Milestone |
 |------|----------|-----------|
-| 11 | VA independent on reports + monitoring. You: 30 calls/week + demos. | Client #5 |
-| 12 | Quarterly review: 90-day metrics. Refine offer, pricing, outreach. Plan next 90 days. | **5 clients, $10-12.5K MRR** |
+| 11 | VA independent. You: optimize copy, A/B test, scale to 2,000+ emails/week. | Client #5 |
+| 12 | Quarterly review: 90-day metrics. Refine offer, copy, infrastructure. | **5 clients, $10-12.5K MRR** |
 
 ---
 
@@ -169,6 +180,9 @@
 | Setup fees collected | $12,500 | $20,000 |
 | Total revenue (90 days) | ~$42,500 | ~$68,000 |
 | Churn | 0% | 0% |
+| Cold emails sent (cumulative) | 30,000+ | 50,000+ |
+| Reply rate | 3%+ | 5%+ |
+| Positive reply rate | 1%+ | 1.5%+ |
 | Capture rate (client avg) | 60%+ of missed calls | 75%+ |
 | Team | You + VA | You + VA |
 | Founder draw | $3,200/mo avg | $5,000/mo avg |
@@ -177,13 +191,32 @@
 
 ## Daily Non-Negotiables
 
-1. **Morning (8-11 AM):** Cold calls. Peak decision-maker availability. No admin, no tech, no email.
-2. **Midday (11-1 PM):** Demos. Book these in the AM calling block.
-3. **Afternoon (2-4 PM):** Tech work. Pipeline improvements, bug fixes, integrations.
-4. **Late afternoon (4-5 PM):** Admin. Client reports, billing, Apollo list refresh.
-5. **Evening (optional):** Pipeline monitoring check. 5 minutes, not 2 hours.
+1. **Morning (8-10 AM):** Review overnight replies. Reply to positive intent <5 min. Schedule demos.
+2. **Mid-morning (10-12 PM):** Live demos (phone, warm from email). Close attempts.
+3. **Afternoon (12-3 PM):** Email optimization — A/B test subject lines, tune copy, review deliverability metrics, clean lists.
+4. **Late afternoon (3-5 PM):** New cohort launches, Apollo list refresh, infrastructure maintenance.
+5. **End of day (5-5:15 PM):** Slack check on auto-replies, monitor inbox placement, queue tomorrow's tasks.
 
-**One rule:** Never let tech work bleed into morning call blocks. Sales is the oxygen. Tech without clients is a hobby.
+**One rule:** Speed-to-lead on positive replies is everything. If someone replies with intent and you wait 4 hours, close rate drops 60%. Set up Slack/phone push notifications for Instantly replies.
+
+---
+
+## Email Best Practices (Reference Card)
+
+| Rule | Reason |
+|------|--------|
+| **Subject lines <50 chars, no all-caps, no spam triggers ("FREE", "ACT NOW")** | Inbox placement |
+| **Body <80 words** | Top performers all under 80 words |
+| **Personalize first line** ("Saw [Company] is one of the bigger...") | Personalized first lines 2x reply rate |
+| **Single CTA per email** | Binary questions ("Worth a quick look?") outperform multi-CTA |
+| **Problem-first, not solution-first** | Open with their pain, not your product |
+| **Specific numbers in body** ("30-40% of calls", "$15-25K/month") | Specificity = credibility |
+| **Plain text, not HTML** | Plain text delivers better + feels human |
+| **No images, no attachments in initial send** | Image-heavy emails go to spam |
+| **Signature with one link (calendar)** | Multiple links = spam trigger |
+| **Send Tuesday-Thursday, 9-11 AM local time** | Peak engagement window |
+| **Pause sequences on auto-reply** | Continuing past OOO kills deliverability |
+| **Remove unengaged after 90 days** | Dead weight drags sender reputation |
 
 ---
 
@@ -191,13 +224,13 @@
 
 | Risk | Probability | Impact | Mitigation |
 |------|------------|--------|------------|
-| Twilio outage | Low | High | UptimeRobot monitoring, SMS alert to you + client |
-| Client churn in first 30 days | Medium | Medium | Over-communicate. Weekly reports. 2-week check-in call. |
-| Objection: "ServiceTitan does this" | Medium | Medium | Demo shows the gap: real-time text-back + attribution they don't have |
-| Can't book enough demos | Medium | High | Test different geos. Try different times. Record calls, improve script. |
-| Tech breaks during demo | Low | High | Always test the pipeline 5 minutes before every demo. |
-| Competitor enters with similar offer | Low | Medium | Your moat is the data + relationship, not the tech. Harder to copy. |
-| Burnout | Medium | High | Strict 40-hour cap. Sunday off. This is a marathon. |
+| Domain burn (spam folder) | Medium | High | Infrastructure redundancy (5 domains), gradual ramp, monitor placement weekly |
+| Reply rate stalls at <2% | Medium | High | A/B test subject lines weekly, verify emails pre-send, tighten ICP |
+| Deliverability crash | Medium | High | Pause 48hr + 30% volume reduction, re-warm, rotate domains |
+| Bounce rate spikes | Low | Medium | Verify emails pre-load, clean list monthly, remove role addresses |
+| Tech breaks during live demo | Low | High | Always test pipeline 5 min before every demo |
+| Owner unsubscribes + marks spam | Medium | Medium | Honor unsubscribe immediately, never send to a competitor's domain |
+| Burnout | Medium | High | Strict 40-hour cap. Sunday off. Email is scalable — don't over-personalize. |
 
 ---
 
@@ -206,8 +239,8 @@
 | Priority | What |
 |----------|------|
 | 1 | Land 5 more clients (10 total, $20-25K MRR) |
-| 2 | Hire SDR (Month 6 trigger) |
-| 3 | Launch Geo 2 — pick second metro, repeat the playbook |
+| 2 | Hire SDR (Month 6 trigger) — SDR now does outbound email + closes via phone |
+| 3 | Launch Geo 2 — new domains, new Apollo list, new case studies |
 | 4 | Build Tier 3 features (full CRM replacement) |
 | 5 | Cross-sell existing plumbing clients' HVAC divisions |
 | 6 | Raise pre-seed (optional — $500K to accelerate geo expansion) |
